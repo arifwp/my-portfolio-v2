@@ -1,6 +1,7 @@
 import { ContainerLayout } from "@/components/containers/ContainerLayout";
 import { SectionAbout } from "@/sections/SectionAbout";
 import { SectionHome } from "@/sections/SectionHome";
+import { SectionProjects } from "@/sections/SectionProjects";
 
 export default function Home() {
   return (
@@ -8,6 +9,8 @@ export default function Home() {
       <SectionHome />
 
       <SectionAbout />
+
+      <SectionProjects />
     </ContainerLayout>
   );
 }
