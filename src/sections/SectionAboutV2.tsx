@@ -15,7 +15,7 @@ export const SectionAboutV2 = () => {
   // const { scrollYProgress } = useScroll();
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start 70%", "center 10%"],
+    offset: ["start 30%", "center 10%"],
   });
 
   const paragraphOpacity = useTransform(
@@ -34,7 +34,7 @@ export const SectionAboutV2 = () => {
     <section
       ref={sectionRef}
       id="about"
-      className="relative w-full gap-12 p-12 flex flex-col items-center justify-center scroll-mt-18"
+      className="relative w-full min-h-screen gap-12 p-6 lg:p-12 flex flex-col items-center justify-center scroll-mt-18"
     >
       <div className="w-full gap-12 flex flex-col">
         <div className="overflow-hidden">
