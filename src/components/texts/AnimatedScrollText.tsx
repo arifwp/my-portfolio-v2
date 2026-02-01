@@ -16,7 +16,7 @@ export const AnimatedScrollText = ({ scrollYProgress }: Props) => {
   let charIndex = 0;
 
   return (
-    <p className="flex flex-wrap text-2xl lg:text-5xl font-semibold leading-none">
+    <p className="flex flex-wrap text-2xl lg:text-5xl xl:text-7xl font-semibold leading-none">
       {words.map((word, wordIndex) => {
         const letters = word.split("");
 

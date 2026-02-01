@@ -71,23 +71,25 @@ export const SectionAboutV2 = () => {
             />
           </div>
 
-          <div className="h-full gap-8 flex flex-col">
-            <AnimatedScrollText scrollYProgress={scrollYProgress} />
+          <div className="h-full gap-6 lg:gap-12 flex flex-col">
+            <div className="gap-4 lg:gap-8 flex flex-col">
+              <AnimatedScrollText scrollYProgress={scrollYProgress} />
 
-            <motion.p
-              style={{ opacity: paragraphOpacity, y: paragraphY }}
-              className="text-sm lg:text-xl font-normal"
-            >
-              I build user interfaces where visual clarity, interaction, and
-              motion are treated as part of the engineering, not decoration. I
-              care about how products feel to use, how layouts guide attention,
-              how interactions communicate intent, and how small details create
-              trust. While my work is frontend-heavy, I design with a full-stack
-              perspective, understanding how data, APIs, and performance
-              constraints shape the final experience. I aim to create interfaces
-              that are intuitive for users, structured for developers, and built
-              to scale with intention.
-            </motion.p>
+              <motion.p
+                style={{ opacity: paragraphOpacity, y: paragraphY }}
+                className="text-md lg:text-lg xl:text-xl font-normal"
+              >
+                I build user interfaces where visual clarity, interaction, and
+                motion are treated as part of the engineering, not decoration. I
+                care about how products feel to use, how layouts guide
+                attention, how interactions communicate intent, and how small
+                details create trust. While my work is frontend-heavy, I design
+                with a full-stack perspective, understanding how data, APIs, and
+                performance constraints shape the final experience. I aim to
+                create interfaces that are intuitive for users, structured for
+                developers, and built to scale with intention.
+              </motion.p>
+            </div>
 
             <ButtonAnimatedHover
               title="Download CV"
