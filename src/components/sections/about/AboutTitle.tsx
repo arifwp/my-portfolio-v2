@@ -26,7 +26,7 @@ export const AboutTitle = ({
   const titleFontsize = useTransform(
     scrollYProgress,
     [0, 0.15],
-    [initialFontSize, "1.5rem"],
+    [initialFontSize, "3rem"],
   );
 
   const titleOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
