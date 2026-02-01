@@ -1,5 +1,6 @@
 "use client";
 
+import { ABOUT_TEXT_RANGE, ABOUT_TEXT_START } from "@/constants/animations";
 import type { MotionValue } from "framer-motion";
 import { motion, useTransform } from "framer-motion";
 
@@ -16,11 +17,11 @@ export const AnimatedCharacter = ({
   totalChars,
   scrollYProgress,
 }: Props) => {
-  const baseStart = 0.25;
-  const animationRange = 0.2;
+  // const baseStart = 0.05;
+  // const animationRange = 0.05;
 
   const progress = index / totalChars;
-  const threshold = baseStart + progress * animationRange;
+  const threshold = ABOUT_TEXT_START + progress * ABOUT_TEXT_RANGE;
 
   // Fungsi transform custom untuk transisi step
   const color = useTransform(scrollYProgress, (latest) =>
