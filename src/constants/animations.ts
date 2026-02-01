@@ -1,0 +1,4 @@
+// SECTION ABOUT
+export const ABOUT_TEXT_START = 0.05;
+export const ABOUT_TEXT_RANGE = 0.35;
+export const ABOUT_TEXT_END = ABOUT_TEXT_START + ABOUT_TEXT_RANGE;
