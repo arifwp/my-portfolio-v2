@@ -37,7 +37,7 @@ export const SectionAboutV2 = () => {
       className="relative w-full min-h-screen gap-12 p-6 lg:p-12 flex flex-col items-center justify-center scroll-mt-18"
     >
       <div className="w-full gap-12 flex flex-col">
-        <div className="overflow-hidden">
+        {/* <div className="overflow-hidden">
           <motion.h3
             initial={{ y: "100%" }}
             whileInView={{
@@ -52,7 +52,7 @@ export const SectionAboutV2 = () => {
           >
             ABOUT ME
           </motion.h3>
-        </div>
+        </div> */}
 
         <motion.div className="w-full gap-12 flex flex-col md:flex-row items-center">
           <div
