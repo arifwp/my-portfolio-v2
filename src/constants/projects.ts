@@ -32,8 +32,8 @@ export const projects: Project[] = [
     overview: "Cloud-based legal practice management for Indonesian firms.",
     image:
       "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop",
-    mockupPhoneImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/kubu-id-phone.png`,
-    mockupDesktopImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/kubu-id-desktop.png`,
+    mockupPhoneImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/legal-plus-phone.webp`,
+    mockupDesktopImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/legal-plus-desktop.webp`,
     description:
       "Obvious wallet, a self-custody crypto currency wallet app that aims to bring a more convenient and seamless way to transact and manage assets",
     liveSite: "https://legalplus.co.id/",
@@ -118,8 +118,8 @@ export const projects: Project[] = [
     overview: "Multi-tenant SaaS for sports venue management.",
     image:
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&h=1080&fit=crop",
-    mockupPhoneImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/kubu-id-phone.png`,
-    mockupDesktopImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/kubu-id-desktop.png`,
+    mockupPhoneImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/playfields-phone.webp`,
+    mockupDesktopImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/playfields-desktop.webp`,
     description:
       "Playfields is an innovative SaaS platform that empowers field owners to digitize and manage their futsal or mini soccer businesses with ease. From seamless booking systems, real-time schedule management, to integrated payment features. Playfields helps local sports venues operate more efficiently. The platform also provides admin dashboards, session-based pricing, and auto expire unpaid bookings to ensure optimal field utilization and user experience. Designed for scalability and ease of use, Playfields is redefining how field operations are managed.",
     liveSite: "https://playfields.id/",
@@ -232,8 +232,8 @@ export const projects: Project[] = [
     overview: "Community and job platform for professionals.",
     image:
       "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920&h=1080&fit=crop",
-    mockupPhoneImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/kubu-id-phone.png`,
-    mockupDesktopImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/kubu-id-desktop.png`,
+    mockupPhoneImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/kubu-id-phone.webp`,
+    mockupDesktopImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/kubu-id-desktop.webp`,
     description:
       "Kubu.id is a dedicated online platform designed to empower informal, non-formal, and casual workers by connecting them with new job opportunities, career insights, and professional consultations. Whether you’re a freelancer, daily wage worker, or part-time employee, Kubu.id provides direct access to employment-related information and expert advice to help you navigate your career journey. Take control of your career today! Download the Kubu.id app now and unlock new opportunities in the world of informal work.",
     liveSite: "https://kubu.id/",
@@ -359,8 +359,8 @@ export const projects: Project[] = [
       "The e-commerce platform connecting SME suppliers with verified resellers.",
     image:
       "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1920&h=1080&fit=crop",
-    mockupPhoneImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/kubu-id-phone.png`,
-    mockupDesktopImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/kubu-id-desktop.png`,
+    mockupPhoneImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/bisnislink-phone.webp`,
+    mockupDesktopImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/bisnislink-desktop.webp`,
     description:
       "BisnisLink is an all-in-one E-Commerce platform designed to help Small and Medium Enterprises (UMKM) grow their businesses efficiently. With BisnisLink, entrepreneurs can easily showcase their products, reach a wider audience, and increase sales through a seamless digital marketplace. In addition to our E-Commerce services, BisnisLink provides free business articles and blogs, offering valuable insights on entrepreneurship, marketing strategies, and business development. Whether you’re starting a new venture or scaling your existing business, BisnisLink is your go-to platform for success.",
     liveSite: "https://bisnislink.id/",
