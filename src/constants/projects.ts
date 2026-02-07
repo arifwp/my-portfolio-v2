@@ -18,6 +18,7 @@ export interface Project {
   internalLink: string;
   period: string;
   keywords: string[];
+  tags: string[];
   task: BasicData[];
   techStack: BasicData[];
 }
@@ -40,6 +41,7 @@ export const projects: Project[] = [
     internalLink: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/project/legal-plus`,
     period: "Jan 2026 - Present",
     keywords: [],
+    tags: ["SaaS", "B2B", "Cloud-Based"],
     task: [
       {
         id: 1,
@@ -125,6 +127,7 @@ export const projects: Project[] = [
     liveSite: "https://playfields.id/",
     internalLink: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/project/playfields`,
     period: "Mar 2025 - Jan 2026",
+    tags: ["SaaS", "B2B", "Booking System"],
     keywords: [
       "Playfields",
       "Booking lapangan online",
@@ -239,6 +242,7 @@ export const projects: Project[] = [
     liveSite: "https://kubu.id/",
     internalLink: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/project/kubu-id`,
     period: "June 2023 - Mar 2025",
+    tags: ["Job Portal", "Community", "Career Development"],
     keywords: [
       "Kubu.id",
       "kubu id",
@@ -366,6 +370,7 @@ export const projects: Project[] = [
     liveSite: "https://bisnislink.id/",
     internalLink: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/project/bisnislink`,
     period: "Sep 2024 - Mar 2-25",
+    tags: ["E-Commerce", "B2B", "B2C", "Small Business", "Marketplace"],
     keywords: [
       "BisnisLink",
       "BisnisLink UMKM",
