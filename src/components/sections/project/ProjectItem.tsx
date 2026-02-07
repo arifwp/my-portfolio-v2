@@ -1,10 +1,13 @@
 "use client";
 
+import { ButtonAnimatedHover } from "@/components/buttons/ButtonAnimatedHover";
 import { Project } from "@/constants/projects";
 import { useCursor } from "@/hooks/useCursor";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useRef } from "react";
 
@@ -29,6 +32,7 @@ const marqueeColors = [
 export const ProjectItem = ({ data, index, total }: ProjectItemProps) => {
   const router = useRouter();
   const isSmallScreen = useMediaQuery("(max-width: 768px)");
+
   const targetRef = useRef<HTMLDivElement>(null);
   const { setVariant } = useCursor();
 
@@ -60,6 +64,7 @@ export const ProjectItem = ({ data, index, total }: ProjectItemProps) => {
 
   const scale = useTransform(scrollYProgress, [0.3, 0.5, 0.7], [0.8, 1, 1]);
 
+  // marquee background color based on index
   const marqueeColor = marqueeColors[index % marqueeColors.length];
 
   return (
@@ -180,15 +185,25 @@ export const ProjectItem = ({ data, index, total }: ProjectItemProps) => {
 
         {/* CENTER TEXT */}
         <motion.div
-          className="w-full md:mx-4 md:max-w-125 px-8 gap-2 flex flex-col shrink-0 items-center justify-center z-10"
+          className="w-full md:mx-4 md:max-w-125 px-8 gap-6 flex flex-col shrink-0 items-center justify-center z-10"
           style={{ scale }}
         >
-          <h3 className="text-4xl lg:text-5xl font-bold text-center">
-            {data.title}
-          </h3>
-          <p className="text-base lg:text-lg text-center text-neutral-600">
-            {data.overview}
-          </p>
+          <div className="w-full gap-2 flex flex-col">
+            <h3 className="text-4xl lg:text-6xl font-bold text-center">
+              {data.title}
+            </h3>
+
+            <p className="text-base lg:text-lg text-center text-neutral-950">
+              {data.overview}
+            </p>
+          </div>
+
+          <Link href={`/project/${data.slug}`} className="flex md:hidden">
+            <ButtonAnimatedHover
+              title="Detail Project"
+              iconEnd={<ArrowRight size={24} />}
+            />
+          </Link>
         </motion.div>
 
         {/* RIGHT IMAGE - Phone Mockup */}
