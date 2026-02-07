@@ -34,31 +34,15 @@ export const SectionAboutV2 = () => {
     <section
       ref={sectionRef}
       id="about"
-      className="relative w-full min-h-screen gap-12 p-6 lg:p-12 flex flex-col items-center justify-center scroll-mt-18"
+      className="relative w-full min-h-[calc(100vh-72px)] gap-12 p-6 lg:p-12 flex flex-col items-center justify-center scroll-mt-18"
     >
       <div className="w-full gap-12 flex flex-col">
-        {/* <div className="overflow-hidden">
-          <motion.h3
-            initial={{ y: "100%" }}
-            whileInView={{
-              y: 0,
-            }}
-            transition={{
-              duration: 0.7,
-              ease: [0.22, 1, 0.36, 1],
-              delay: 0.2,
-            }}
-            className="text-4xl lg:text-7xl font-bold text-center md:text-start"
-          >
-            ABOUT ME
-          </motion.h3>
-        </div> */}
-
         <motion.div className="w-full gap-12 flex flex-col md:flex-row items-center">
           <div
             className={clsx(
               "w-50 h-70",
               "md:w-70 md:h-auto",
+              "lg:w-100 md:h-auto",
               "relative aspect-9/16 shrink-0",
             )}
           >
