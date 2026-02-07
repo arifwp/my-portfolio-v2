@@ -242,7 +242,7 @@ export const projects: Project[] = [
     liveSite: "https://kubu.id/",
     internalLink: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/project/kubu-id`,
     period: "June 2023 - Mar 2025",
-    tags: ["Job Portal", "Community", "Career Development"],
+    tags: ["Job Portal", "Mobile App", "Career Development"],
     keywords: [
       "Kubu.id",
       "kubu id",
