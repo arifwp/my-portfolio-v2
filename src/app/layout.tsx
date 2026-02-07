@@ -2,6 +2,7 @@ import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
 import type { Metadata } from "next";
 import { Instrument_Sans } from "next/font/google";
 import "./globals.css";
+import { CursorProvider } from "@/CursorProvider";
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",
@@ -21,7 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${instrumentSans.variable} antialiased`}>
-        <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        <CursorProvider>
+          <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        </CursorProvider>
       </body>
     </html>
   );

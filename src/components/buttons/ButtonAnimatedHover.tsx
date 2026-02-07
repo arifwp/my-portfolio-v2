@@ -21,7 +21,7 @@ export const ButtonAnimatedHover = ({
       initial="rest"
       animate="rest"
       className={clsx(
-        "relative overflow-hidden w-fit px-4 py-2 lg:px-4 lg:py-2 gap-2 rounded-sm lg:rounded-md border border-neutral-400 font-bold text-md flex items-center cursor-pointer",
+        "relative overflow-hidden w-fit px-6 py-2 lg:px-8 lg:py-2.5 gap-2 rounded-full border border-neutral-950 font-bold text-md flex items-center leading-none cursor-pointer",
         className,
       )}
       {...rest}
@@ -29,7 +29,7 @@ export const ButtonAnimatedHover = ({
       {/* Background layer */}
       <motion.div
         variants={{
-          rest: { y: "100%" },
+          rest: { y: "110%" },
           hover: { y: "0%" },
         }}
         transition={{ duration: 0.3, ease: "easeInOut" }}

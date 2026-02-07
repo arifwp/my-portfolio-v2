@@ -29,7 +29,7 @@ export const menuItems: Menu[] = [
 
 export const TopNavbar = () => {
   return (
-    <nav className="sticky top-0 w-full px-12 h-18 bg-white flex flex-row items-center justify-between z-999">
+    <nav className="sticky top-0 w-full px-6 lg:px-12 h-18 bg-white flex flex-row items-center justify-between z-999">
       <Link href={"/"} className="text-2xl font-bold leading-none">
         PORTFOLIO
       </Link>
