@@ -88,48 +88,56 @@ export const ProjectItem = ({ data, index }: Props) => {
         router.push(`/project/${data.slug}`);
       }}
     >
-      {/* Marquee Background Text - Single Line */}
+      {/* Marquee */}
       <div
         className="w-[110vw] absolute inset-0 overflow-hidden pointer-events-none -z-10 flex items-start pt-[10vh]"
         style={{
           transform: "rotate(-3deg)",
         }}
       >
-        <motion.div
-          ref={marqueeRef}
-          className={`text-neutral-950 whitespace-nowrap py-3 px-4 lg:py-6 lg:px-8 font-bold text-3xl md:text-5xl lg:text-7xl leading-none flex items-center ${marqueeColor}`}
-          style={{
-            willChange: "transform",
-            backfaceVisibility: "hidden",
-            perspective: 1000,
-          }}
-          animate={isInView ? { x: ["0%", "-50%"] } : { x: "0%" }}
-          transition={{
-            x: {
-              repeat: Infinity,
-              repeatType: "loop",
-              duration: 8,
-              ease: "linear",
-            },
-          }}
-        >
-          {Array(2)
-            .fill(null)
-            .map((_, i) => (
-              <div key={i} className="flex items-center">
-                {data.tags.map((tag, tagIndex) => (
-                  <div key={`${i}-${tagIndex}`} className="flex items-center">
-                    <span className="mx-6 lg:mx-12">{tag}</span>
-                    {tagIndex < data.tags.length - 1 && (
-                      <span className="w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-neutral-950" />
-                    )}
-                  </div>
-                ))}
+        <div className="relative w-full">
+          {/* Background */}
+          <div
+            ref={marqueeRef}
+            className={`absolute inset-0 ${marqueeColor}`}
+          />
 
-                <div className="w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-neutral-950" />
-              </div>
-            ))}
-        </motion.div>
+          {/* TEXT */}
+          <motion.div
+            className="text-neutral-950 whitespace-nowrap py-3 px-4 lg:py-6 lg:px-8 font-bold text-3xl md:text-5xl lg:text-7xl leading-none flex items-center relative"
+            style={{
+              willChange: "transform",
+              backfaceVisibility: "hidden",
+              perspective: 1000,
+            }}
+            animate={isInView ? { x: ["0%", "-50%"] } : { x: "0%" }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 8,
+                ease: "linear",
+              },
+            }}
+          >
+            {Array(2)
+              .fill(null)
+              .map((_, i) => (
+                <div key={i} className="flex items-center">
+                  {data.tags.map((tag, tagIndex) => (
+                    <div key={`${i}-${tagIndex}`} className="flex items-center">
+                      <span className="mx-6 lg:mx-12">{tag}</span>
+                      {tagIndex < data.tags.length - 1 && (
+                        <span className="w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-neutral-950" />
+                      )}
+                    </div>
+                  ))}
+
+                  <div className="w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-neutral-950" />
+                </div>
+              ))}
+          </motion.div>
+        </div>
       </div>
 
       {/* Main Content */}
