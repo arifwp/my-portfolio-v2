@@ -33,7 +33,7 @@ export const ButtonAnimatedHover = ({
           hover: { y: "0%" },
         }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="absolute inset-0 bg-neutral-900"
+        className="absolute inset-0 bg-neutral-950"
       />
 
       {/* Text default */}
@@ -43,7 +43,7 @@ export const ButtonAnimatedHover = ({
           hover: { y: "-120%" },
         }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="relative z-10 flex items-center gap-2 text-neutral-900"
+        className="relative z-10 flex items-center gap-2 text-neutral-950"
       >
         {title} {iconEnd && iconEnd}
       </motion.span>
