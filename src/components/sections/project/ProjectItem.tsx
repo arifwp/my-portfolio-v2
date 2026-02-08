@@ -11,10 +11,9 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useRef } from "react";
 
-interface ProjectItemProps {
+interface Props {
   data: Project;
   index: number;
-  total: number;
 }
 
 // backgrounds color for marquee
@@ -29,7 +28,7 @@ const marqueeColors = [
   "bg-indigo-200",
 ];
 
-export const ProjectItem = ({ data, index, total }: ProjectItemProps) => {
+export const ProjectItem = ({ data, index }: Props) => {
   const router = useRouter();
   const isSmallScreen = useMediaQuery("(max-width: 768px)");
 
@@ -67,15 +66,18 @@ export const ProjectItem = ({ data, index, total }: ProjectItemProps) => {
   // marquee background color based on index
   const marqueeColor = marqueeColors[index % marqueeColors.length];
 
+  const isFirstItem = index === 0;
+
   return (
     <div
       ref={targetRef}
-      className="relative h-[calc(100vh-72px)] bg-white w-full flex items-center justify-center overflow-hidden shadow-2xl"
+      className="relative h-[calc(100vh-72px)] bg-white w-full flex items-center justify-center overflow-hidden"
       style={{
         position: "sticky",
         top: "72px",
-        boxShadow:
-          index === 0 ? "none" : "0 -25px 50px 12px rgba(0, 0, 0, 0.25)",
+        boxShadow: isFirstItem
+          ? "none"
+          : "0 -50px 30px 0px rgba(0, 0, 0, 0.25)",
       }}
       onMouseEnter={() => setVariant("project")}
       onMouseLeave={() => setVariant("default")}
