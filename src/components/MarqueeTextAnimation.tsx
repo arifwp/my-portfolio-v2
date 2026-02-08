@@ -1,4 +1,3 @@
-import React from "react";
 import { MarqueeText } from "./MarqueeText";
 
 export interface VelocityMapping {
@@ -11,10 +10,7 @@ const MARQUEE_TEXTS: string[] = [
 ];
 const MARQUEE_CONFIG = {
   velocity: 100,
-  stiffness: 400,
-  damping: 50,
   numcompies: 6,
-  velocityMapping: { input: [0, 1000], output: [0, 5] } as VelocityMapping,
 };
 
 export const MarqueeTextAnimation = () => {
@@ -26,10 +22,7 @@ export const MarqueeTextAnimation = () => {
           baseVelocity={
             index % 2 !== 0 ? -MARQUEE_CONFIG.velocity : MARQUEE_CONFIG.velocity
           }
-          damping={MARQUEE_CONFIG.damping}
-          stiffness={MARQUEE_CONFIG.stiffness}
           numCopies={MARQUEE_CONFIG.numcompies}
-          velocityMapping={MARQUEE_CONFIG.velocityMapping}
         >
           {text}&nbsp;
         </MarqueeText>

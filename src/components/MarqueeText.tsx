@@ -5,46 +5,22 @@ import {
   motion,
   useAnimationFrame,
   useMotionValue,
-  useScroll,
-  useSpring,
   useTransform,
-  useVelocity,
 } from "motion/react";
 import { useRef } from "react";
-import { VelocityMapping } from "./MarqueeTextAnimation";
 
 interface Props {
   children: React.ReactNode;
   baseVelocity: number;
-  damping: number;
-  stiffness: number;
   numCopies: number;
-  velocityMapping: VelocityMapping;
 }
 
 export const MarqueeText = ({
   children,
   baseVelocity = 100,
-  damping,
-  stiffness,
   numCopies,
-  velocityMapping,
 }: Props) => {
   const baseX = useMotionValue(0);
-  const scrollOptions = {};
-  const { scrollY } = useScroll(scrollOptions);
-  const scrollVelocity = useVelocity(scrollY);
-  const smoothVelocity = useSpring(scrollVelocity, {
-    damping: damping,
-    stiffness: stiffness,
-  });
-  const velocityFactor = useTransform(
-    smoothVelocity,
-    velocityMapping?.input,
-    velocityMapping?.output,
-    { clamp: false },
-  );
-
   const copyRef = useRef<HTMLSpanElement | null>(null);
   const copyWidth = useElementWidth(copyRef);
 
@@ -59,22 +35,13 @@ export const MarqueeText = ({
     return `${wrap(-copyWidth, 0, v)}px`;
   });
 
-  const directionFactor = useRef<number>(1);
   useAnimationFrame((t, delta) => {
-    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
-
-    if (velocityFactor.get() < 0) {
-      directionFactor.current = -1;
-    } else if (velocityFactor.get() > 0) {
-      directionFactor.current = 1;
-    }
-
-    moveBy += directionFactor.current * moveBy * velocityFactor.get();
+    const moveBy = baseVelocity * (delta / 1000);
     baseX.set(baseX.get() + moveBy);
   });
 
   const spans = [];
-  for (let i = 0; i < numCopies!; i++) {
+  for (let i = 0; i < numCopies; i++) {
     spans.push(
       <span key={i} ref={i === 0 ? copyRef : null} className="shrink-0">
         {children}
@@ -83,11 +50,9 @@ export const MarqueeText = ({
   }
 
   return (
-    <div className={"relative overflow-hidden"}>
+    <div className="relative overflow-x-hidden overflow-y-auto">
       <motion.div
-        className={
-          "flex whitespace-nowrap text-center font-sans text-4xl font-bold tracking-[-0.02em] drop-shadow md:text-[5rem] md:leading-20"
-        }
+        className="flex whitespace-nowrap text-center text-4xl md:text-6xl font-semibold tracking-tight drop-shadow"
         style={{ x }}
       >
         {spans}
