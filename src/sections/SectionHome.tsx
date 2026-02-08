@@ -77,7 +77,7 @@ export const SectionHome = () => {
               // transition: { staggerChildren: 0.15 },
             },
           }}
-          className="w-full gap-0 text-lg xl:text-2xl font-semibold flex flex-col lg:flex-row items-center justify-between"
+          className="w-full gap-0 text-lg xl:text-2xl font-semibold flex flex-col md:flex-row items-center justify-between"
         >
           <div className="overflow-hidden">
             <motion.h4
