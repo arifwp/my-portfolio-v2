@@ -44,7 +44,6 @@ export const ProjectItem = ({ data, index }: Props) => {
 
   // container animations
   const y = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [100, 0, 0, -100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
   // image animations
   const leftImageX = useTransform(
@@ -138,8 +137,7 @@ export const ProjectItem = ({ data, index }: Props) => {
         className="w-full h-full flex flex-col md:flex-row items-center justify-center px-8"
         style={{
           y,
-          opacity,
-          willChange: "transform, opacity",
+          willChange: "transform",
           transform: "translate3d(0,0,0)",
         }}
       >
