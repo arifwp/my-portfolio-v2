@@ -18,6 +18,10 @@
   --font-sans: var(--font-instrument-sans);
 }
 
+* {
+  transition: background-color 0.5s ease;
+}
+
 html {
   scroll-behavior: smooth;
 }
