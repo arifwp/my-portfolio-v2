@@ -52,8 +52,7 @@ export const SectionContact = () => {
             src={"/assets/images/portrait-arif-prasetyo.webp"}
             fill
             alt="Profile of Arif Prasetyo"
-            objectFit="cover"
-            objectPosition="top"
+            className="object-cover object-top"
           />
         </div>
 
