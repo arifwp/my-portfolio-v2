@@ -8,11 +8,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useRef } from "react";
 
 export const SectionAboutV2 = () => {
-  const router = useRouter();
   const sectionRef = useRef<HTMLElement>(null);
 
   // const { scrollYProgress } = useScroll();

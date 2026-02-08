@@ -3,7 +3,7 @@
 import { CursorContext, CursorVariant } from "@/hooks/useCursor";
 import { usePathname } from "next/navigation";
 import { startTransition, useEffect, useState } from "react";
-import { GlobalCursor } from "./components/GlobalCursor";
+import { GlobalCursor } from "../components/GlobalCursor";
 
 export const CursorProvider = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();

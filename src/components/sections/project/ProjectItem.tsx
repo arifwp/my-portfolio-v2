@@ -4,17 +4,16 @@ import { ButtonAnimatedHover } from "@/components/buttons/ButtonAnimatedHover";
 import { Project } from "@/constants/projects";
 import { useCursor } from "@/hooks/useCursor";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useRef } from "react";
 
-interface ProjectItemProps {
+interface Props {
   data: Project;
   index: number;
-  total: number;
 }
 
 // backgrounds color for marquee
@@ -29,9 +28,11 @@ const marqueeColors = [
   "bg-indigo-200",
 ];
 
-export const ProjectItem = ({ data, index, total }: ProjectItemProps) => {
+export const ProjectItem = ({ data, index }: Props) => {
   const router = useRouter();
   const isSmallScreen = useMediaQuery("(max-width: 768px)");
+  const marqueeRef = useRef(null);
+  const isInView = useInView(marqueeRef, { once: false, margin: "-100px" });
 
   const targetRef = useRef<HTMLDivElement>(null);
   const { setVariant } = useCursor();
@@ -43,7 +44,6 @@ export const ProjectItem = ({ data, index, total }: ProjectItemProps) => {
 
   // container animations
   const y = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [100, 0, 0, -100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
   // image animations
   const leftImageX = useTransform(
@@ -67,15 +67,18 @@ export const ProjectItem = ({ data, index, total }: ProjectItemProps) => {
   // marquee background color based on index
   const marqueeColor = marqueeColors[index % marqueeColors.length];
 
+  const isFirstItem = index === 0;
+
   return (
     <div
       ref={targetRef}
-      className="relative h-[calc(100vh-72px)] bg-white w-full flex items-center justify-center overflow-hidden shadow-2xl"
+      className="relative h-[calc(100vh-72px)] bg-white w-full flex items-center justify-center overflow-hidden"
       style={{
         position: "sticky",
         top: "72px",
-        boxShadow:
-          index === 0 ? "none" : "0 -25px 50px 12px rgba(0, 0, 0, 0.25)",
+        boxShadow: isFirstItem
+          ? "none"
+          : "0 -50px 30px 0px rgba(0, 0, 0, 0.25)",
       }}
       onMouseEnter={() => setVariant("project")}
       onMouseLeave={() => setVariant("default")}
@@ -85,50 +88,66 @@ export const ProjectItem = ({ data, index, total }: ProjectItemProps) => {
         router.push(`/project/${data.slug}`);
       }}
     >
-      {/* Marquee Background Text - Single Line */}
+      {/* Marquee */}
       <div
         className="w-[110vw] absolute inset-0 overflow-hidden pointer-events-none -z-10 flex items-start pt-[10vh]"
         style={{
           transform: "rotate(-3deg)",
         }}
       >
-        <motion.div
-          className={`${marqueeColor} text-neutral-950 whitespace-nowrap py-3 px-4 lg:py-6 lg:px-8 font-bold text-3xl md:text-5xl lg:text-7xl leading-none flex items-center`}
-          animate={{
-            x: ["0%", "-50%"],
-          }}
-          transition={{
-            x: {
-              repeat: Infinity,
-              repeatType: "loop",
-              duration: 120,
-              ease: "linear",
-            },
-          }}
-        >
-          {Array(20)
-            .fill(null)
-            .map((_, i) => (
-              <div key={i} className="flex items-center">
-                {data.tags.map((tag, tagIndex) => (
-                  <div key={`${i}-${tagIndex}`} className="flex items-center">
-                    <span className="mx-6 lg:mx-12">{tag}</span>
-                    {tagIndex < data.tags.length - 1 && (
-                      <span className="w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-neutral-950" />
-                    )}
-                  </div>
-                ))}
+        <div className="relative w-full">
+          {/* Background */}
+          <div
+            ref={marqueeRef}
+            className={`absolute inset-0 ${marqueeColor}`}
+          />
 
-                <div className="w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-neutral-950" />
-              </div>
-            ))}
-        </motion.div>
+          {/* TEXT */}
+          <motion.div
+            className="text-neutral-950 whitespace-nowrap py-3 px-4 lg:py-6 lg:px-8 font-bold text-3xl md:text-5xl lg:text-7xl leading-none flex items-center relative"
+            style={{
+              willChange: "transform",
+              backfaceVisibility: "hidden",
+              perspective: 1000,
+            }}
+            animate={isInView ? { x: ["0%", "-50%"] } : { x: "0%" }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 8,
+                ease: "linear",
+              },
+            }}
+          >
+            {Array(2)
+              .fill(null)
+              .map((_, i) => (
+                <div key={i} className="flex items-center">
+                  {data.tags.map((tag, tagIndex) => (
+                    <div key={`${i}-${tagIndex}`} className="flex items-center">
+                      <span className="mx-6 lg:mx-12">{tag}</span>
+                      {tagIndex < data.tags.length - 1 && (
+                        <span className="w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-neutral-950" />
+                      )}
+                    </div>
+                  ))}
+
+                  <div className="w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-neutral-950" />
+                </div>
+              ))}
+          </motion.div>
+        </div>
       </div>
 
       {/* Main Content */}
       <motion.div
         className="w-full h-full flex flex-col md:flex-row items-center justify-center px-8"
-        style={{ y, opacity }}
+        style={{
+          y,
+          willChange: "transform",
+          transform: "translate3d(0,0,0)",
+        }}
       >
         {/* MOBILE VIEW ONLY */}
         <div className="relative flex md:hidden w-full mb-8 items-center justify-center">
@@ -143,8 +162,9 @@ export const ProjectItem = ({ data, index, total }: ProjectItemProps) => {
               src={data.mockupDesktopImage}
               alt={`Image project ${data.title}`}
               fill
-              className="object-contain drop-shadow-2xl"
-              priority={index === 0}
+              className="object-contain"
+              priority={isFirstItem}
+              loading={index > 0 ? "lazy" : "eager"}
             />
           </motion.div>
 
@@ -160,8 +180,9 @@ export const ProjectItem = ({ data, index, total }: ProjectItemProps) => {
                 src={data.mockupPhoneImage}
                 alt={`Image project ${data.title}`}
                 fill
-                className="object-contain drop-shadow-2xl"
-                priority={index === 0}
+                className="object-contain"
+                priority={isFirstItem}
+                loading={index > 0 ? "lazy" : "eager"}
               />
             </div>
           </motion.div>
@@ -177,8 +198,9 @@ export const ProjectItem = ({ data, index, total }: ProjectItemProps) => {
               src={data.mockupDesktopImage}
               alt={`Image project ${data.title}`}
               fill
-              className="object-contain drop-shadow-2xl"
-              priority={index === 0}
+              className="object-contain"
+              priority={isFirstItem}
+              loading={index > 0 ? "lazy" : "eager"}
             />
           </div>
         </motion.div>
@@ -216,8 +238,9 @@ export const ProjectItem = ({ data, index, total }: ProjectItemProps) => {
               src={data.mockupPhoneImage}
               alt={`Image project ${data.title}`}
               fill
-              className="object-contain drop-shadow-2xl"
-              priority={index === 0}
+              className="object-contain"
+              priority={isFirstItem}
+              loading={index > 0 ? "lazy" : "eager"}
             />
           </div>
         </motion.div>

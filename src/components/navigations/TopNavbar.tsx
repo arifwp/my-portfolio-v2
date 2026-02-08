@@ -29,8 +29,11 @@ export const menuItems: Menu[] = [
 
 export const TopNavbar = () => {
   return (
-    <nav className="sticky top-0 w-full px-6 lg:px-12 h-18 bg-white flex flex-row items-center justify-between z-999">
-      <Link href={"/"} className="text-2xl font-bold leading-none">
+    <nav className="sticky top-0 w-full px-6 lg:px-12 h-18 bg-white dark:bg-neutral-800 flex flex-row items-center justify-between z-999">
+      <Link
+        href={"/"}
+        className="text-neutral-950 dark:text-white text-2xl font-bold leading-none"
+      >
         PORTFOLIO
       </Link>
 
@@ -57,7 +60,10 @@ export const TopNavbar = () => {
               ease: [0.22, 1, 0.36, 1],
             }}
           >
-            <Link href={item.href} className="text-sm lg:text-lg">
+            <Link
+              href={item.href}
+              className="text-sm lg:text-lg text-neutral-950 dark:text-white"
+            >
               {item.name}
             </Link>
           </motion.div>

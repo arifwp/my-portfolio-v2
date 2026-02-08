@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
+@variant dark (&:is(.dark *));
+
 :root {
   --background: #ffffff;
   --foreground: #0a0a0a;
+}
+
+.dark {
+  --background: #262626;
+  --foreground: #ffffff;
 }
 
 @theme inline {
@@ -11,12 +18,9 @@
   --font-sans: var(--font-instrument-sans);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
+* {
+  transition: background-color 0.5s ease;
+}
 
 html {
   scroll-behavior: smooth;
@@ -26,6 +30,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-instrument-sans), Helvetica, sans-serif;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -33,11 +40,6 @@ body {
 }
 
 .no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
