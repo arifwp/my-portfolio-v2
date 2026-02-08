@@ -15,6 +15,7 @@ import {
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 
 const MarqueeTextAnimation = dynamic(
@@ -26,6 +27,7 @@ const MarqueeTextAnimation = dynamic(
 );
 
 export default function AboutMePage() {
+  const pathname = usePathname();
   const isSmallScreen = useMediaQuery("(max-width: 768px)");
 
   const { setTheme } = useTheme();
@@ -37,6 +39,10 @@ export default function AboutMePage() {
       ? ["start 60%", "start 40%"]
       : ["start 80%", "start 20%"],
   });
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [pathname]);
 
   // detect when marquee section is in view
   useEffect(() => {
