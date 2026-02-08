@@ -4,7 +4,7 @@ import { ButtonAnimatedHover } from "@/components/buttons/ButtonAnimatedHover";
 import { Project } from "@/constants/projects";
 import { useCursor } from "@/hooks/useCursor";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -31,6 +31,8 @@ const marqueeColors = [
 export const ProjectItem = ({ data, index }: Props) => {
   const router = useRouter();
   const isSmallScreen = useMediaQuery("(max-width: 768px)");
+  const marqueeRef = useRef(null);
+  const isInView = useInView(marqueeRef, { once: false, margin: "-100px" });
 
   const targetRef = useRef<HTMLDivElement>(null);
   const { setVariant } = useCursor();
@@ -95,20 +97,24 @@ export const ProjectItem = ({ data, index }: Props) => {
         }}
       >
         <motion.div
-          className={`${marqueeColor} text-neutral-950 whitespace-nowrap py-3 px-4 lg:py-6 lg:px-8 font-bold text-3xl md:text-5xl lg:text-7xl leading-none flex items-center`}
-          animate={{
-            x: ["0%", "-50%"],
+          ref={marqueeRef}
+          className={`text-neutral-950 whitespace-nowrap py-3 px-4 lg:py-6 lg:px-8 font-bold text-3xl md:text-5xl lg:text-7xl leading-none flex items-center ${marqueeColor}`}
+          style={{
+            willChange: "transform",
+            backfaceVisibility: "hidden",
+            perspective: 1000,
           }}
+          animate={isInView ? { x: ["0%", "-50%"] } : { x: "0%" }}
           transition={{
             x: {
               repeat: Infinity,
               repeatType: "loop",
-              duration: 120,
+              duration: 8,
               ease: "linear",
             },
           }}
         >
-          {Array(20)
+          {Array(2)
             .fill(null)
             .map((_, i) => (
               <div key={i} className="flex items-center">
@@ -130,7 +136,12 @@ export const ProjectItem = ({ data, index }: Props) => {
       {/* Main Content */}
       <motion.div
         className="w-full h-full flex flex-col md:flex-row items-center justify-center px-8"
-        style={{ y, opacity }}
+        style={{
+          y,
+          opacity,
+          willChange: "transform, opacity",
+          transform: "translate3d(0,0,0)",
+        }}
       >
         {/* MOBILE VIEW ONLY */}
         <div className="relative flex md:hidden w-full mb-8 items-center justify-center">
@@ -145,8 +156,9 @@ export const ProjectItem = ({ data, index }: Props) => {
               src={data.mockupDesktopImage}
               alt={`Image project ${data.title}`}
               fill
-              className="object-contain drop-shadow-2xl"
-              priority={index === 0}
+              className="object-contain"
+              priority={isFirstItem}
+              loading={index > 0 ? "lazy" : "eager"}
             />
           </motion.div>
 
@@ -162,8 +174,9 @@ export const ProjectItem = ({ data, index }: Props) => {
                 src={data.mockupPhoneImage}
                 alt={`Image project ${data.title}`}
                 fill
-                className="object-contain drop-shadow-2xl"
-                priority={index === 0}
+                className="object-contain"
+                priority={isFirstItem}
+                loading={index > 0 ? "lazy" : "eager"}
               />
             </div>
           </motion.div>
@@ -179,8 +192,9 @@ export const ProjectItem = ({ data, index }: Props) => {
               src={data.mockupDesktopImage}
               alt={`Image project ${data.title}`}
               fill
-              className="object-contain drop-shadow-2xl"
-              priority={index === 0}
+              className="object-contain"
+              priority={isFirstItem}
+              loading={index > 0 ? "lazy" : "eager"}
             />
           </div>
         </motion.div>
@@ -218,8 +232,9 @@ export const ProjectItem = ({ data, index }: Props) => {
               src={data.mockupPhoneImage}
               alt={`Image project ${data.title}`}
               fill
-              className="object-contain drop-shadow-2xl"
-              priority={index === 0}
+              className="object-contain"
+              priority={isFirstItem}
+              loading={index > 0 ? "lazy" : "eager"}
             />
           </div>
         </motion.div>
