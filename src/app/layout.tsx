@@ -8,6 +8,7 @@ import "./globals.css";
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",
+  display: "swap",
   subsets: ["latin"],
 });
 
