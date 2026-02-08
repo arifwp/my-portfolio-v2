@@ -1,7 +1,8 @@
 import { ContainerLayout } from "@/components/containers/ContainerLayout";
 import { SectionAboutV2 } from "@/sections/SectionAboutV2";
+import { SectionAboutV3 } from "@/sections/SectionAboutV3";
+import { SectionContact } from "@/sections/SectionContact";
 import { SectionHome } from "@/sections/SectionHome";
-import { SectionProjects } from "@/sections/SectionProjects";
 import { SectionProjectsV2 } from "@/sections/SectionProjectsV2";
 
 export default function Home() {
@@ -9,13 +10,11 @@ export default function Home() {
     <ContainerLayout>
       <SectionHome />
 
-      <SectionAboutV2 />
-      {/* <SectionAbout /> */}
+      <SectionAboutV3 />
 
-      {/* <SectionTechStacksV2 /> */}
-
-      {/* <SectionProjects /> */}
       <SectionProjectsV2 />
+
+      <SectionContact />
     </ContainerLayout>
   );
 }
