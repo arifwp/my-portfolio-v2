@@ -168,6 +168,7 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
                 ease: [0.22, 1, 0.36, 1],
                 delay: 0.4,
               }}
+              viewport={{ once: true }}
               className="text-2xl font-bold text-neutral-950"
             >
               TECH STACK
@@ -184,6 +185,7 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
                 ease: [0.22, 1, 0.36, 1],
                 delay: 0.6,
               }}
+              viewport={{ once: true }}
               className="text-md font-light text-neutral-950"
             >
               Technologies and tools used to bring this project to life
@@ -194,7 +196,7 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
         <motion.div
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           variants={{
             hidden: {},
             show: {
@@ -239,6 +241,7 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
                 ease: [0.22, 1, 0.36, 1],
                 delay: 0.4,
               }}
+              viewport={{ once: true }}
               className="text-2xl font-bold text-neutral-950"
             >
               My Role
@@ -256,6 +259,7 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
                 ease: [0.22, 1, 0.36, 1],
                 delay: 0.6,
               }}
+              viewport={{ once: true }}
               className="text-md font-light text-neutral-950"
             >
               My contributions and responsibilities in this project
@@ -266,7 +270,7 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
         <motion.div
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           variants={{
             hidden: {},
             show: {
