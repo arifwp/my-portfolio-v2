@@ -37,29 +37,23 @@ export const metadata: Metadata = {
     siteName: "Arif Wahyu Prasetyo Portfolio",
     images: [
       {
-        url: `${baseUrl}/assets/images/about-me-og.jpg`,
+        url: `${baseUrl}/assets/images/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: "Arif Wahyu Prasetyo - Full Stack Engineer",
-        type: "image/jpeg",
-      },
-      {
-        url: `${baseUrl}/assets/images/profile.jpg`,
-        width: 800,
-        height: 800,
-        alt: "Arif Wahyu Prasetyo Profile Photo",
-        type: "image/jpeg",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "About Me - Arif Wahyu Prasetyo | Full Stack Engineer",
+    title: "Arif Wahyu Prasetyo | Full Stack Engineer - Frontend Heavy",
     description:
       "Learn about my journey as a Full Stack Engineer. Expertise in React, Next.js, TypeScript, and modern web development.",
     creator: "@arifwahyuu_",
-    images: [`${baseUrl}/assets/images/about-me-og.jpg`],
+    images: [
+      `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/og-image.jpg`,
+    ],
   },
 
   robots: {
