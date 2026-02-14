@@ -72,7 +72,7 @@ export const ProjectItem = ({ data, index }: Props) => {
   return (
     <div
       ref={targetRef}
-      className="relative h-[calc(100vh-72px)] bg-white w-full flex items-center justify-center overflow-hidden"
+      className="relative h-[calc(100vh-72px)] bg-white w-full flex items-center justify-center overflow-hidden cursor-pointer"
       style={{
         position: "sticky",
         top: "72px",
