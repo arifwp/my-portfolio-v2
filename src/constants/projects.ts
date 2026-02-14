@@ -99,34 +99,30 @@ export const projects: Project[] = [
       },
       {
         id: 2,
-        name: "Next.js",
-      },
-      {
-        id: 3,
         name: "Tailwind CSS",
       },
       {
-        id: 4,
+        id: 3,
         name: "Zustand",
       },
       {
-        id: 5,
+        id: 4,
         name: "React Query",
       },
       {
-        id: 6,
+        id: 5,
         name: "Typescript",
       },
       {
-        id: 7,
+        id: 6,
         name: "Node.js",
       },
       {
-        id: 8,
+        id: 7,
         name: "CI/CD",
       },
       {
-        id: 9,
+        id: 8,
         name: "Git",
       },
     ],
@@ -171,31 +167,23 @@ export const projects: Project[] = [
     task: [
       {
         id: 1,
-        name: "Reduced booking-related issues by 40% through improved data handling and auto-expire mechanisms",
+        name: "Translated complex Figma designs into production-ready web interfaces with high visual accuracy, responsiveness, and accessibility standards.",
       },
       {
         id: 2,
-        name: "Developed frontend features using Next.js, Tailwind CSS, and Zustand for state management, ensuring responsive and dynamic UI",
+        name: "Worked closely with designers to resolve design-to-code gaps, clarifying edge cases, responsive behavior, and interaction details before implementation.",
       },
       {
         id: 3,
-        name: "Implemented Supabase as backend service with real-time updates, authentication, and cloud storage integration",
+        name: "Improved existing frontend code by refactoring tightly coupled components into cleaner, more scalable structures, increasing readability and long-term maintainability.",
       },
       {
         id: 4,
-        name: "Built dynamic pricing and schedule management based on day-type and session rules with full calendar visualization",
+        name: "Built dynamic pricing based on day-type and session rules",
       },
       {
         id: 5,
-        name: "Integrated Xendit for payment gateway, handling booking expiration logic and webhook-based payment status update",
-      },
-      {
-        id: 6,
-        name: "Enabled multi-role user access (owner/staff) and invitation-based collaboration to support flexible team management",
-      },
-      {
-        id: 7,
-        name: "Developed reusable custom hooks and modular components to ensure scalability and maintainability of the codebase",
+        name: "Implemented responsive design system supporting desktop, tablet, and mobile views.",
       },
     ],
     techStack: [
