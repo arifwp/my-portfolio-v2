@@ -1,10 +1,12 @@
 "use client";
 
+import { ButtonAnimatedHover } from "@/components/buttons/ButtonAnimatedHover";
 import { experiences } from "@/constants/experience";
 import { skills } from "@/constants/skills";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { useTheme } from "@/hooks/useTheme";
 import { projectBySlug } from "@/utils/fn";
+import { ArrowUpRight } from "lucide-react";
 import {
   domAnimation,
   LazyMotion,
@@ -197,6 +199,29 @@ export default function AboutMePage() {
               and visual intention coexist, software that works beautifully, and
               feels effortless to use.
             </motion.p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.7,
+              ease: [0.22, 1, 0.36, 1],
+              delay: 0.4,
+            }}
+          >
+            <Link
+              href={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/resume`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ButtonAnimatedHover
+                title="RESUME"
+                iconEnd={
+                  <ArrowUpRight className="w-6 h-6 lg:w-7 lg:h-7 aspect-square" />
+                }
+              />
+            </Link>
           </motion.div>
         </div>
 
