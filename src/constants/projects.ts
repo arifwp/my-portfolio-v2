@@ -31,16 +31,36 @@ export const projects: Project[] = [
     role: "Full Stack Engineer",
     company: "Legal Plus",
     overview: "Cloud-based legal practice management for Indonesian firms.",
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop",
+    image: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/banner-legal-plus.webp`,
     mockupPhoneImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/legal-plus-phone.webp`,
     mockupDesktopImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/legal-plus-desktop.webp`,
     description:
-      "Obvious wallet, a self-custody crypto currency wallet app that aims to bring a more convenient and seamless way to transact and manage assets",
+      "Legal Plus is a cloud-based legal practice management platform built specifically to help Indonesian law firms streamline and modernize their operations through a centralized digital system. It integrates case management, client records, document organization, task tracking, billing, and internal collaboration into a single secure workspace, allowing firms to reduce administrative complexity and improve overall efficiency. By digitizing core legal workflows, Legal Plus enables better deadline monitoring, structured documentation, transparent financial management, and more organized communication across teams. Designed with scalability and data security in mind, the platform supports law firms in maintaining professional standards while increasing productivity and delivering more reliable, technology-driven legal services.",
     liveSite: "https://legalplus.co.id/",
     internalLink: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/project/legal-plus`,
     period: "Jan 2026 - Present",
-    keywords: [],
+    keywords: [
+      "Legal Plus",
+      "Legal Plus Indonesia",
+      "software firma hukum",
+      "sistem manajemen kantor hukum",
+      "legal practice management",
+      "software advokat Indonesia",
+      "manajemen kasus hukum",
+      "legal case management",
+      "Legal Plus cloud",
+      "software pengacara",
+      "digitalisasi firma hukum",
+      "legal tech Indonesia",
+      "practice management software",
+      "law firm software Indonesia",
+      "Legal Plus Arif Wahyu Prasetyo",
+      "sistem billing kantor hukum",
+      "document management legal",
+      "legal workflow automation",
+      "kantor hukum digital",
+      "legal compliance software",
+    ],
     tags: ["SaaS", "B2B", "Cloud-Based"],
     task: [
       {
@@ -118,8 +138,7 @@ export const projects: Project[] = [
     role: "Full Stack Developer",
     company: "Playfields",
     overview: "Multi-tenant SaaS for sports venue management.",
-    image:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&h=1080&fit=crop",
+    image: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/banner-playfields.webp`,
     mockupPhoneImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/playfields-phone.webp`,
     mockupDesktopImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/playfields-desktop.webp`,
     description:
@@ -233,8 +252,7 @@ export const projects: Project[] = [
     role: "Full Stack Developer",
     company: "Business Watch Indonesia",
     overview: "Community and job platform for professionals.",
-    image:
-      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920&h=1080&fit=crop",
+    image: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/banner-kubu-id.webp`,
     mockupPhoneImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/kubu-id-phone.webp`,
     mockupDesktopImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/kubu-id-desktop.webp`,
     description:
@@ -361,15 +379,14 @@ export const projects: Project[] = [
     company: "Business Watch Indonesia",
     overview:
       "The e-commerce platform connecting SME suppliers with verified resellers.",
-    image:
-      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1920&h=1080&fit=crop",
+    image: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/banner-bisnislink.webp`,
     mockupPhoneImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/bisnislink-phone.webp`,
     mockupDesktopImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/bisnislink-desktop.webp`,
     description:
       "BisnisLink is an all-in-one E-Commerce platform designed to help Small and Medium Enterprises (UMKM) grow their businesses efficiently. With BisnisLink, entrepreneurs can easily showcase their products, reach a wider audience, and increase sales through a seamless digital marketplace. In addition to our E-Commerce services, BisnisLink provides free business articles and blogs, offering valuable insights on entrepreneurship, marketing strategies, and business development. Whether you’re starting a new venture or scaling your existing business, BisnisLink is your go-to platform for success.",
     liveSite: "https://bisnislink.id/",
     internalLink: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/project/bisnislink`,
-    period: "Sep 2024 - Mar 2-25",
+    period: "Sep 2024 - Mar 2025",
     tags: ["E-Commerce", "B2B", "B2C", "Small Business", "Marketplace"],
     keywords: [
       "BisnisLink",

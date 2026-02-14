@@ -50,7 +50,7 @@ export const MarqueeText = ({
   }
 
   return (
-    <div className="relative overflow-x-hidden overflow-y-auto">
+    <div className="relative overflow-x-hidden">
       <motion.div
         className="flex whitespace-nowrap text-center text-4xl md:text-6xl font-semibold tracking-tight drop-shadow"
         style={{ x }}

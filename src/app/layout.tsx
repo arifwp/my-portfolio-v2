@@ -14,7 +14,7 @@ const instrumentSans = Instrument_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_FRONTEND_URL || "https://arifwahyu.com",
+    process.env.NEXT_PUBLIC_FRONTEND_URL || "https://arifprasetyo.com",
   ),
 
   title: {

@@ -1,6 +1,7 @@
 "use client";
 
 import { Project, projects } from "@/constants/projects";
+import { Metadata } from "next";
 import { useLayoutEffect, useState } from "react";
 
 export const useElementWidth = <T extends HTMLElement>(

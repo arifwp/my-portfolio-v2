@@ -16,7 +16,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 
 const MarqueeTextAnimation = dynamic(
   () =>
@@ -33,6 +33,15 @@ export default function AboutMePage() {
   const { setTheme } = useTheme();
   const marqueeRef = useRef<HTMLDivElement>(null);
 
+  // Force scroll to top BEFORE any layout calculations
+  useLayoutEffect(() => {
+    if (typeof window !== "undefined") {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }
+  }, [pathname]);
+
   const { scrollYProgress } = useScroll({
     target: marqueeRef,
     offset: isSmallScreen
@@ -40,8 +49,33 @@ export default function AboutMePage() {
       : ["start 80%", "start 20%"],
   });
 
+  // Disable browser scroll restoration dan force scroll to top
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "instant" });
+    // Disable browser's native scroll restoration
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+    // Multiple scroll attempts to override everything
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+
+    const timeouts = [0, 10, 50, 100].map((delay) =>
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      }, delay),
+    );
+
+    return () => {
+      timeouts.forEach(clearTimeout);
+      // Reset scroll restoration when leaving page
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "auto";
+      }
+    };
   }, [pathname]);
 
   // detect when marquee section is in view
