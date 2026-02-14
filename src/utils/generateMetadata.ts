@@ -71,43 +71,83 @@ export function generateProjectJsonLd(project: Project) {
 
   return {
     "@context": "https://schema.org",
-    "@type": "CreativeWork",
-    name: project.title,
-    description: project.description,
-    url: `${baseUrl}/project/${project.slug}`,
-    image: project.image,
-    author: {
-      "@type": "Person",
-      name: "Arif Wahyu Prasetyo",
-      jobTitle: "Full Stack Engineer",
-      url: baseUrl,
-    },
-    datePublished: project.period,
-    inLanguage: "id-ID",
-    keywords: [...project.keywords, ...project.tags].join(", "),
-    about: {
-      "@type": "SoftwareApplication",
-      name: project.title,
-      applicationCategory: "WebApplication",
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "IDR",
+    "@graph": [
+      // Main Creative Work
+      {
+        "@type": "CreativeWork",
+        "@id": `${baseUrl}/project/${project.slug}#creativework`,
+        name: project.title,
+        description: project.description,
+        url: `${baseUrl}/project/${project.slug}`,
+        image: {
+          "@type": "ImageObject",
+          url: project.image,
+          width: 1200,
+          height: 630,
+        },
+        author: {
+          "@type": "Person",
+          name: "Arif Wahyu Prasetyo",
+          jobTitle: "Full Stack Engineer",
+          url: baseUrl,
+        },
+        datePublished: project.period,
+        inLanguage: "id-ID",
+        keywords: [...project.keywords, ...project.tags].join(", "),
+        about: {
+          "@type": "SoftwareApplication",
+          name: project.title,
+          applicationCategory: "WebApplication",
+          operatingSystem: "Web",
+          provider: {
+            "@type": "Organization",
+            name: project.company,
+          },
+        },
       },
-      operatingSystem: "Web",
-      provider: {
-        "@type": "Organization",
-        name: project.company,
+      // Breadcrumb
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${baseUrl}/project/${project.slug}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: baseUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Projects",
+            item: `${baseUrl}/#projects`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: project.title,
+            item: `${baseUrl}/project/${project.slug}`,
+          },
+        ],
       },
-    },
-    creator: {
-      "@type": "Person",
-      name: "Arif Wahyu Prasetyo",
-      jobTitle: project.role,
-    },
-    workExample: project.techStack.map((tech) => ({
-      "@type": "TechArticle",
-      name: tech.name,
-    })),
+      // WebPage
+      {
+        "@type": "WebPage",
+        "@id": `${baseUrl}/project/${project.slug}#webpage`,
+        url: `${baseUrl}/project/${project.slug}`,
+        name: `${project.title} - ${project.role}`,
+        description: project.overview,
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": `${baseUrl}/#website`,
+        },
+        breadcrumb: {
+          "@id": `${baseUrl}/project/${project.slug}#breadcrumb`,
+        },
+        about: {
+          "@id": `${baseUrl}/project/${project.slug}#creativework`,
+        },
+      },
+    ],
   };
 }
