@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface Menu {
   id: number;
@@ -13,21 +14,23 @@ export const menuItems: Menu[] = [
   {
     id: 1,
     name: "About",
-    href: `${process.env.NEXT_PUBLIC_FRONTEND_URL}#about`,
+    href: "#about",
   },
   {
     id: 2,
     name: "Projects",
-    href: `${process.env.NEXT_PUBLIC_FRONTEND_URL}#projects`,
+    href: "#projects",
   },
   {
     id: 3,
     name: "Contact",
-    href: `${process.env.NEXT_PUBLIC_FRONTEND_URL}#contact`,
+    href: "#contact",
   },
 ];
 
 export const TopNavbar = () => {
+  const pathname = usePathname();
+
   return (
     <nav className="sticky top-0 w-full px-6 lg:px-12 h-18 bg-white dark:bg-neutral-800 flex flex-row items-center justify-between z-999">
       <Link
@@ -48,26 +51,32 @@ export const TopNavbar = () => {
         }}
         className="gap-4 flex-row hidden sm:flex"
       >
-        {menuItems.map((item) => (
-          <motion.div
-            key={item.id}
-            variants={{
-              hidden: { y: -100, opacity: 0 },
-              show: { y: 0, opacity: 1 },
-            }}
-            transition={{
-              duration: 0.7,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-          >
-            <Link
-              href={item.href}
-              className="text-sm lg:text-lg text-neutral-950 dark:text-white"
+        {menuItems.map((item) => {
+          const isHome = pathname === "/";
+
+          const href = isHome ? item.href : `/${item.href}`;
+
+          return (
+            <motion.div
+              key={item.id}
+              variants={{
+                hidden: { y: -100, opacity: 0 },
+                show: { y: 0, opacity: 1 },
+              }}
+              transition={{
+                duration: 0.7,
+                ease: [0.22, 1, 0.36, 1],
+              }}
             >
-              {item.name}
-            </Link>
-          </motion.div>
-        ))}
+              <Link
+                href={href}
+                className="text-sm lg:text-lg text-neutral-950 dark:text-white"
+              >
+                {item.name}
+              </Link>
+            </motion.div>
+          );
+        })}
       </motion.div>
     </nav>
   );
