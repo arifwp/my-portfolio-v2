@@ -65,11 +65,11 @@ export const projects: Project[] = [
     task: [
       {
         id: 1,
-        name: "Translated complex Figma designs into production-ready web interfaces with high visual accuracy, responsiveness, and accessibility standards.",
+        name: "Engineered 4 end-to-end payment flows (package renewal, upgrade, add-on storage & accounts) on the core SaaS frontend, streamlining the entire transaction experience for the platform's active client base.",
       },
       {
         id: 2,
-        name: "Worked closely with designers to resolve design-to-code gaps, clarifying edge cases, responsive behavior, and interaction details before implementation.",
+        name: "Architected a granular role-based permission system across 60+ page and panel level access points, covering case management, contacts, financials, invoicing, reports, and system settings, enabling precise CRUD control per user role across the entire SaaS platform.",
       },
       {
         id: 3,
@@ -77,11 +77,11 @@ export const projects: Project[] = [
       },
       {
         id: 4,
-        name: "Built dynamic pricing based on day-type and session rules",
+        name: "Delivered 15+ production-ready UI pages and components from scratch, translating Figma designs into fully responsive and pixelaccurate interfaces across the core SaaS application.",
       },
       {
         id: 5,
-        name: "Implemented responsive design system supporting desktop, tablet, and mobile views.",
+        name: "Resolved critical frontend bugs across the core SaaS application, maintaining production stability and ensuring consistent UX for active clients.",
       },
     ],
     techStack: [
@@ -159,31 +159,19 @@ export const projects: Project[] = [
     task: [
       {
         id: 1,
-        name: "Reduced booking-related issues by 40% through improved data handling and auto-expire mechanisms",
+        name: "Architected and built multi-tenant SaaS platform from scratch enabling sports venue owners to manage bookings, serving data with real-time reservation system.",
       },
       {
         id: 2,
-        name: "Developed frontend features using Next.js, Tailwind CSS, and Zustand for state management, ensuring responsive and dynamic UI",
+        name: "Integrated Xendit payment gateway processing transactions monthly with secure payment handling, automated reminder, and reconciliation features reducing manual payment tracking by 90%.",
       },
       {
         id: 3,
-        name: "Implemented Supabase as backend service with real-time updates, authentication, and cloud storage integration",
+        name: "Created a responsive admin dashboard using Tailwind CSS that integrates venue analytics, revenue reports, booking workflows, and customer insights, improving clarity and decision-making for operational teams.",
       },
       {
         id: 4,
-        name: "Built dynamic pricing and schedule management based on day-type and session rules with full calendar visualization",
-      },
-      {
-        id: 5,
-        name: "Integrated Xendit for payment gateway, handling booking expiration logic and webhook-based payment status update",
-      },
-      {
-        id: 6,
-        name: "Enabled multi-role user access (owner/staff) and invitation-based collaboration to support flexible team management",
-      },
-      {
-        id: 7,
-        name: "Developed reusable custom hooks and modular components to ensure scalability and maintainability of the codebase",
+        name: "Collaborated with cross-functional teams in agile environment, consistently delivering sprint commitments with on-time delivery.",
       },
     ],
     techStack: [
