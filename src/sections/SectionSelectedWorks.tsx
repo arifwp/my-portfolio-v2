@@ -9,71 +9,17 @@ import { SelectedWorksMotion } from "@/components/sections/project/SelectedWorks
 const geist = Geist({ subsets: ["latin"] });
 
 function ProjectPreview({ project }: { project: Project }) {
-  if (
-    project.slug === "etix" ||
-    project.slug === "repo-alpha-red-group-portal"
-  ) {
-    const isEtix = project.slug === "etix";
-    return (
-      <div
-        className={`${styles.cover} ${isEtix ? styles.etix : styles.orbyte}`}
-      >
-        {!isEtix && (
-          <div className={styles.peopleGraphic} aria-hidden="true">
-            <div className={styles.peopleRow}>
-              <span />
-              <span />
-              <span />
-            </div>
-            <div className={styles.workflowLine} />
-            <div className={styles.workflowCard}>
-              <span />
-              Access granted
-              <ArrowUpRight size={16} />
-            </div>
-            <div className={styles.workflowCard}>
-              <span />
-              Leave approved
-              <ArrowUpRight size={16} />
-            </div>
-          </div>
-        )}
-        {isEtix && (
-          <div className={styles.ticketGraphic} aria-hidden="true">
-            <span>ADMIT ONE</span>
-            <i />
-            <span>etix</span>
-          </div>
-        )}
-        <span className={styles.coverCompany}>Alpha Red Solutions</span>
-        <div className={styles.coverTitle}>
-          {isEtix ? "etix" : "Orbyte"}
-          <span>.</span>
-        </div>
-        <div className={styles.coverBottom}>
-          <span>
-            {isEtix
-              ? "Live experiences.\nBuilt for everyone."
-              : "People, connected.\nWork, organized."}
-          </span>
-          {isEtix && <ArrowUpRight aria-hidden="true" size={36} />}
-        </div>
-        <div className={styles.coverServices}>
-          {isEtix
-            ? "Tickets / Reservations / Payments"
-            : "Employee records / Access control / HR workflows"}
-        </div>
-      </div>
-    );
-  }
-
   return (
     <Image
-      src={`/assets/images/banner-${project.slug}.webp`}
+      src={project.image}
       alt={`${project.title} project preview`}
       fill
       sizes="(max-width: 639px) 100vw, 50vw"
-      className={styles.projectImage}
+      className={
+        project.slug === "etix" || project.slug === "repo-alpha-red-group-portal"
+          ? `${styles.projectImage} ${styles.projectScreenshot}`
+          : styles.projectImage
+      }
     />
   );
 }

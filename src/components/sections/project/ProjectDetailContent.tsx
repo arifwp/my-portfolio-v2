@@ -147,10 +147,10 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
       >
         <Image
           src={`${data.image}`}
-          alt={`Image ${data.title}`}
+          alt={`${data.title} website preview`}
           fill
-          objectFit="contain"
-          objectPosition="top"
+          sizes="(max-width: 767px) 100vw, 95vw"
+          className="object-contain object-top"
         />
       </motion.div>
 
