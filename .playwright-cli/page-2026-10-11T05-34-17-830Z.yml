@@ -1,0 +1,109 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - link "PORTFOLIO" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e5]:
+        - link "About" [ref=e7] [cursor=pointer]:
+          - /url: "#about"
+        - link "Projects" [ref=e9] [cursor=pointer]:
+          - /url: "#projects"
+        - link "Contact" [ref=e11] [cursor=pointer]:
+          - /url: "#contact"
+    - main [ref=e12]:
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - heading "Hi! I'm Arif Prasetyo" [level=1] [ref=e17]
+          - heading "VISUAL POETRY TRAPPED INSIDE AN ENGINEER'S MIND" [level=2] [ref=e18]:
+            - generic [ref=e19]: VISUAL POETRY TRAPPED
+            - generic [ref=e21]: INSIDE AN ENGINEER'S MIND
+        - generic [ref=e23]:
+          - heading "FULL STACK ENGINEER" [level=4] [ref=e25]
+          - generic [ref=e26]:
+            - heading "BASED IN" [level=4] [ref=e28]
+            - heading "SURAKARTA, INDONESIA" [level=4] [ref=e30]
+      - generic [ref=e31]:
+        - heading "I’m Arif, a Full Stack Engineer with a Frontend soul, turning logic into visual poetry." [level=2] [ref=e32]
+        - paragraph [ref=e33]: From scalable architectures to expressive user interfaces, I build products that balance engineering precision with visual intention.
+        - link [ref=e34] [cursor=pointer]:
+          - /url: /about-me
+          - button [ref=e35]:
+            - generic [ref=e37]: More About Me
+            - generic [ref=e40]: More About Me
+      - region [ref=e43]:
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - heading "Selected works." [level=2] [ref=e46]
+            - paragraph [ref=e47]:
+              - generic [ref=e48]: Web
+              - generic [ref=e49]: platforms,
+              - generic [ref=e50]: built
+              - generic [ref=e51]: for
+              - generic [ref=e52]: real
+              - generic [ref=e53]: work.
+          - generic [ref=e54]:
+            - link "Alpha Red Solutions etix. Live experiences. Built for everyone. Tickets / Reservations / Payments Etix Web Portal V3 Event ticketing platform for concerts and festivals in Malaysia. Frontend Engineer Alpha Red Solutions" [ref=e55] [cursor=pointer]:
+              - /url: /project/etix
+              - generic [ref=e58]:
+                - generic [ref=e59]: Alpha Red Solutions
+                - generic [ref=e60]: etix.
+                - generic [ref=e61]: Live experiences. Built for everyone.
+                - generic [ref=e66]: Tickets / Reservations / Payments
+              - generic [ref=e68]:
+                - heading "Etix Web Portal V3" [level=3] [ref=e69]
+                - paragraph [ref=e70]: Event ticketing platform for concerts and festivals in Malaysia.
+                - generic [ref=e71]: Frontend Engineer / Alpha Red Solutions
+            - link "Alpha Red Solutions Orbyte. People, connected. Work, organized. Employee records / Access control / HR workflows Orbyte Internal HRIS portal for Alpha Red Group's regional workforce. Frontend Engineer Alpha Red Solutions" [ref=e76] [cursor=pointer]:
+              - /url: /project/repo-alpha-red-group-portal
+              - generic [ref=e79]:
+                - generic [ref=e80]: Alpha Red Solutions
+                - generic [ref=e81]: Orbyte.
+                - generic [ref=e82]: People, connected. Work, organized.
+                - generic [ref=e87]: Employee records / Access control / HR workflows
+              - generic [ref=e89]:
+                - heading "Orbyte" [level=3] [ref=e90]
+                - paragraph [ref=e91]: Internal HRIS portal for Alpha Red Group's regional workforce.
+                - generic [ref=e92]: Frontend Engineer / Alpha Red Solutions
+            - link [ref=e97] [cursor=pointer]:
+              - /url: /project/legal-plus
+              - img "Legal Plus project preview" [ref=e100]
+              - generic [ref=e102]:
+                - heading "Legal Plus" [level=3] [ref=e103]
+                - paragraph [ref=e104]: Cloud-based legal practice management for Indonesian firms.
+            - link [ref=e109] [cursor=pointer]:
+              - /url: /project/playfields
+              - img "Playfields project preview" [ref=e112]
+              - generic [ref=e114]:
+                - heading "Playfields" [level=3] [ref=e115]
+                - paragraph [ref=e116]: Multi-tenant SaaS for sports venue management.
+            - link [ref=e121] [cursor=pointer]:
+              - /url: /project/kubu-id
+              - img "Kubu.id project preview" [ref=e124]
+              - generic [ref=e126]:
+                - heading "Kubu.id" [level=3] [ref=e127]
+                - paragraph [ref=e128]: Community and job platform for professionals.
+          - group [ref=e133]:
+            - generic "More projects" [ref=e134] [cursor=pointer]
+          - generic [ref=e136]:
+            - generic [ref=e137]: From customer journeys to internal tools.
+            - link "Let’s build something" [ref=e138] [cursor=pointer]:
+              - /url: "#contact"
+      - generic [ref=e143]:
+        - heading "LET'S TAAA AAALLLKKK!" [level=3] [ref=e144]:
+          - text: LET'S TAAA
+          - generic [ref=e145]: AAALLLKKK!
+        - link [ref=e146] [cursor=pointer]:
+          - /url: mailto:arif.wpras@gmail.com
+          - button [ref=e147]:
+            - generic [ref=e149]: CONTACT NOW
+            - generic [ref=e152]: CONTACT NOW
+        - img "Profile of Arif Prasetyo" [ref=e156]
+        - generic [ref=e157]:
+          - link "LINKEDIN" [ref=e159] [cursor=pointer]:
+            - /url: https://linkedin.com/in/arif-wahyu-prasetyo
+          - link "GITHUB" [ref=e164] [cursor=pointer]:
+            - /url: https://github.com/arifwp
+        - generic [ref=e168]:
+          - paragraph [ref=e169]: ©2026 ARIF PRASETYO
+          - paragraph [ref=e170] [cursor=pointer]: GO BACK TO TOP
+  - alert [ref=e171]

@@ -7,7 +7,7 @@ const baseUrl =
 export const metadata: Metadata = {
   title: "About Me - Arif Wahyu Prasetyo | Full Stack Engineer Journey",
   description:
-    "Learn about Arif Wahyu Prasetyo's journey as a Full Stack Engineer specializing in Frontend Development. Alumni of Universitas Amikom Yogyakarta with expertise in React, Next.js, TypeScript, and modern web technologies. Based in Jakarta, Indonesia.",
+    "Learn about Arif Wahyu Prasetyo's journey as a Full Stack Engineer specializing in Frontend Development. Alumni of Universitas Amikom Yogyakarta with expertise in React, Next.js, TypeScript, and modern web technologies. Based in Surakarta, Indonesia.",
   keywords: [
     "About Arif Wahyu Prasetyo",
     "Arif Wahyu Biography",

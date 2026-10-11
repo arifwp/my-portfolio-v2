@@ -10,7 +10,7 @@ export const SectionAboutV3 = () => {
     >
       <h2 className="text-2xl lg:text-4xl font-semibold text-center">
         {
-          "I’m Arif — a Full Stack Engineer with a Frontend soul, turning logic into visual poetry."
+          "I’m Arif, a Full Stack Engineer with a Frontend soul, turning logic into visual poetry."
         }
       </h2>
 

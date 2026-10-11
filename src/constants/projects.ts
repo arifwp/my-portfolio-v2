@@ -26,6 +26,105 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    slug: "etix",
+    title: "Etix",
+    role: "Frontend Engineer",
+    company: "Alpha Red Solutions",
+    overview:
+      "Event ticketing platform for concerts and festivals in Malaysia.",
+    description:
+      "Etix is a ticketing platform serving concerts, festivals, and live events across Malaysia. The platform handles ticket availability, reservations, bookings, and payment processing for event organizers and attendees. As part of a company wide migration effort, the frontend was rebuilt from Vue.js to React with TanStack Start, moving revenue critical customer flows onto a modern, more maintainable stack without disrupting live ticket sales.",
+    liveSite: "https://www.etix.my/",
+    period: "Apr 2026 - Present",
+    tags: ["Event Management", "Ticketing", "E-Commerce"],
+    task: [
+      {
+        id: 1,
+        name: "Served as the sole frontend engineer on an end-to-end migration from Vue.js to React and TanStack Start, rebuilding 5 revenue critical customer journeys without interrupting live ticket sales.",
+      },
+      {
+        id: 2,
+        name: "Integrated Store APIs powering ticket availability, reservations, bookings, and payment, replacing legacy Vue data flows with typed React and TanStack Start patterns.",
+      },
+      {
+        id: 3,
+        name: "Fixed reliability issues across 6 production critical areas including session expiration, real-time inventory caching, booking re-entry, payment recovery, API contract mismatches, and React rendering performance.",
+      },
+      {
+        id: 4,
+        name: "Rebuilt checkout and booking flows to handle high concurrency ticket releases, reducing stale inventory states during peak traffic windows.",
+      },
+      {
+        id: 5,
+        name: "Worked directly with backend and product teams across the APAC region to align migration scope with zero downtime requirements on a live commercial platform.",
+      },
+    ],
+    techStack: [
+      { id: 1, name: "React" },
+      { id: 2, name: "TanStack Start" },
+      { id: 3, name: "TypeScript" },
+      { id: 4, name: "Tailwind CSS" },
+      { id: 5, name: "REST API" },
+      { id: 6, name: "Vite" },
+      { id: 7, name: "Microsoft Azure" },
+      { id: 8, name: "Git" },
+    ],
+    image: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/banner-legal-plus.webp`,
+    mockupPhoneImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/legal-plus-phone.webp`,
+    mockupDesktopImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/legal-plus-desktop.webp`,
+    internalLink: "",
+    keywords: [],
+  },
+  {
+    id: 2,
+    slug: "repo-alpha-red-group-portal",
+    title: "Orbyte",
+    role: "Frontend Engineer",
+    company: "Alpha Red Solutions",
+    overview: "Internal HRIS portal for Alpha Red Group's regional workforce.",
+    description:
+      "Orbyte is the internal HRIS platform used across Alpha Red Group to manage employee records, roles, and HR workflows for a distributed APAC team. Built to replace fragmented, manual HR processes with a centralized, role-aware system, the portal covers employee data management, access control, and document workflows within a single authenticated interface used daily by internal staff across regions.",
+    period: "Apr 2026 - Present",
+    tags: ["Internal Tool", "HRIS", "B2B"],
+    task: [
+      {
+        id: 1,
+        name: "Built the frontend for an internal HRIS platform serving 50+ users, digitizing previously manual employee management workflows.",
+      },
+      {
+        id: 2,
+        name: "Implemented role-based access control across employee data views, reducing data-entry errors by 30% through automated validation and permission scoped forms.",
+      },
+      {
+        id: 3,
+        name: "Built the frontend for an AI assisted document workflow, unifying document generation, review, and revision into a single authenticated, responsive interface.",
+      },
+      {
+        id: 4,
+        name: "Designed reusable form and data table components in Material UI to standardize HR record management across multiple modules.",
+      },
+      {
+        id: 5,
+        name: "Coordinated with fully remote, cross-functional teams across the APAC region on asynchronous delivery and release cycles.",
+      },
+    ],
+    techStack: [
+      { id: 1, name: "React" },
+      { id: 2, name: "Material UI" },
+      { id: 3, name: "TypeScript" },
+      { id: 4, name: "REST API" },
+      { id: 5, name: "Microsoft Azure" },
+      { id: 6, name: "Git" },
+    ],
+    image: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/banner-legal-plus.webp`,
+    mockupPhoneImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/legal-plus-phone.webp`,
+    mockupDesktopImage: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/legal-plus-desktop.webp`,
+    liveSite: "",
+    internalLink: "",
+    keywords: [],
+  },
+  {
+    id: 3,
     slug: "legal-plus",
     title: "Legal Plus",
     role: "Full Stack Engineer",
@@ -120,7 +219,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     slug: "playfields",
     title: "Playfields",
     role: "Full Stack Developer",
@@ -222,7 +321,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 3,
+    id: 5,
     slug: "kubu-id",
     title: "Kubu.id",
     role: "Full Stack Developer",
@@ -348,7 +447,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 4,
+    id: 6,
     slug: "bisnislink",
     title: "BisnisLink",
     role: "Full Stack Developer",

@@ -128,7 +128,7 @@ export const SectionHome = () => {
                   ease: [0.22, 1, 0.36, 1],
                 }}
               >
-                BANDUNG, INDONESIA
+                SURAKARTA, INDONESIA
               </motion.h4>
             </div>
           </motion.div>

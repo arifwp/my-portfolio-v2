@@ -2,7 +2,7 @@ import { ContainerLayout } from "@/components/containers/ContainerLayout";
 import { SectionAboutV3 } from "@/sections/SectionAboutV3";
 import { SectionContact } from "@/sections/SectionContact";
 import { SectionHome } from "@/sections/SectionHome";
-import { SectionProjectsV2 } from "@/sections/SectionProjectsV2";
+import { SectionSelectedWorks } from "@/sections/SectionSelectedWorks";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
 
       <SectionAboutV3 />
 
-      <SectionProjectsV2 />
+      <SectionSelectedWorks />
 
       <SectionContact />
     </ContainerLayout>

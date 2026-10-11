@@ -1,0 +1,115 @@
+- generic [active] [ref=f4e1]:
+  - generic [ref=f4e2]:
+    - navigation [ref=f4e3]:
+      - link "PORTFOLIO" [ref=f4e4] [cursor=pointer]:
+        - /url: /
+    - main [ref=f4e5]:
+      - generic [ref=f4e7]:
+        - generic [ref=f4e8]:
+          - heading "Hi! I'm Arif Prasetyo" [level=1] [ref=f4e10]
+          - heading "VISUAL POETRY TRAPPED INSIDE AN ENGINEER'S MIND" [level=2] [ref=f4e11]:
+            - generic [ref=f4e12]: VISUAL POETRY TRAPPED
+            - generic [ref=f4e14]: INSIDE AN ENGINEER'S MIND
+        - generic [ref=f4e16]:
+          - heading "FULL STACK ENGINEER" [level=4] [ref=f4e18]
+          - generic [ref=f4e19]:
+            - heading "BASED IN" [level=4] [ref=f4e21]
+            - heading "SURAKARTA, INDONESIA" [level=4] [ref=f4e23]
+      - generic [ref=f4e24]:
+        - heading "I’m Arif, a Full Stack Engineer with a Frontend soul, turning logic into visual poetry." [level=2] [ref=f4e25]
+        - paragraph [ref=f4e26]: From scalable architectures to expressive user interfaces, I build products that balance engineering precision with visual intention.
+        - link [ref=f4e27] [cursor=pointer]:
+          - /url: /about-me
+          - button [ref=f4e28]:
+            - generic [ref=f4e30]: More About Me
+            - generic [ref=f4e33]: More About Me
+      - region [ref=f4e36]:
+        - generic [ref=f4e37]:
+          - generic [ref=f4e38]:
+            - heading "Selected works." [level=2] [ref=f4e39]
+            - paragraph [ref=f4e40]:
+              - generic [ref=f4e41]: Web
+              - generic [ref=f4e42]: platforms,
+              - generic [ref=f4e43]: built
+              - generic [ref=f4e44]: for
+              - generic [ref=f4e45]: real
+              - generic [ref=f4e46]: work.
+          - generic [ref=f4e47]:
+            - link [ref=f4e48] [cursor=pointer]:
+              - /url: /project/etix
+              - generic [ref=f4e51]:
+                - generic [aria-hidden] [ref=f4e52]:
+                  - generic [ref=f4e53]: ADMIT ONE
+                  - generic [ref=f4e55]: etix
+                - generic [ref=f4e56]: Alpha Red Solutions
+                - generic [ref=f4e57]: etix.
+                - generic [ref=f4e58]: Live experiences. Built for everyone.
+                - generic [ref=f4e63]: Tickets / Reservations / Payments
+              - generic [ref=f4e65]:
+                - heading "Etix" [level=3] [ref=f4e66]
+                - paragraph [ref=f4e67]: Event ticketing platform for concerts and festivals in Malaysia.
+                - generic [ref=f4e68]: Frontend Engineer / Alpha Red Solutions
+            - link [ref=f4e73] [cursor=pointer]:
+              - /url: /project/repo-alpha-red-group-portal
+              - generic [ref=f4e76]:
+                - generic [ref=f4e77]: Alpha Red Solutions
+                - generic [ref=f4e78]: Orbyte.
+                - generic [ref=f4e79]: People, connected. Work, organized.
+                - generic [ref=f4e81]: Employee records / Access control / HR workflows
+              - generic [ref=f4e83]:
+                - heading "Orbyte" [level=3] [ref=f4e84]
+                - paragraph [ref=f4e85]: Internal HRIS portal for Alpha Red Group's regional workforce.
+                - generic [ref=f4e86]: Frontend Engineer / Alpha Red Solutions
+            - link [ref=f4e91] [cursor=pointer]:
+              - /url: /project/legal-plus
+              - img "Legal Plus project preview" [ref=f4e94]
+              - generic [ref=f4e96]:
+                - heading "Legal Plus" [level=3] [ref=f4e97]
+                - paragraph [ref=f4e98]: Cloud-based legal practice management for Indonesian firms.
+                - generic [ref=f4e99]: Full Stack Engineer / Legal Plus
+            - link [ref=f4e104] [cursor=pointer]:
+              - /url: /project/playfields
+              - img "Playfields project preview" [ref=f4e107]
+              - generic [ref=f4e109]:
+                - heading "Playfields" [level=3] [ref=f4e110]
+                - paragraph [ref=f4e111]: Multi-tenant SaaS for sports venue management.
+                - generic [ref=f4e112]: Full Stack Developer / Playfields
+            - link [ref=f4e117] [cursor=pointer]:
+              - /url: /project/kubu-id
+              - img "Kubu.id project preview" [ref=f4e120]
+              - generic [ref=f4e122]:
+                - heading "Kubu.id" [level=3] [ref=f4e123]
+                - paragraph [ref=f4e124]: Community and job platform for professionals.
+                - generic [ref=f4e125]: Full Stack Developer / Business Watch Indonesia
+          - group [ref=f4e130]:
+            - generic "More projects" [ref=f4e131] [cursor=pointer]
+          - generic [ref=f4e133]:
+            - generic [ref=f4e134]: From customer journeys to internal tools.
+            - link "Let’s build something" [ref=f4e135] [cursor=pointer]:
+              - /url: "#contact"
+      - generic [ref=f4e140]:
+        - heading "LET'S TAAA AAALLLKKK!" [level=3] [ref=f4e141]:
+          - text: LET'S TAAA
+          - generic [ref=f4e142]: AAALLLKKK!
+        - link [ref=f4e143] [cursor=pointer]:
+          - /url: mailto:arif.wpras@gmail.com
+          - button [ref=f4e144]:
+            - generic [ref=f4e146]: CONTACT NOW
+            - generic [ref=f4e149]: CONTACT NOW
+        - img "Profile of Arif Prasetyo" [ref=f4e153]
+        - generic [ref=f4e154]:
+          - link "LINKEDIN" [ref=f4e156] [cursor=pointer]:
+            - /url: https://linkedin.com/in/arif-wahyu-prasetyo
+          - link "GITHUB" [ref=f4e161] [cursor=pointer]:
+            - /url: https://github.com/arifwp
+        - generic [ref=f4e165]:
+          - paragraph [ref=f4e166]: ©2026 ARIF PRASETYO
+          - paragraph [ref=f4e167] [cursor=pointer]: GO BACK TO TOP
+    - generic [ref=f4e169]:
+      - link "About" [ref=f4e170] [cursor=pointer]:
+        - /url: "#about"
+      - link "Projects" [ref=f4e171] [cursor=pointer]:
+        - /url: "#projects"
+      - link "Contact" [ref=f4e172] [cursor=pointer]:
+        - /url: "#contact"
+  - button "Open Next.js Dev Tools" [ref=f4e178] [cursor=pointer]
