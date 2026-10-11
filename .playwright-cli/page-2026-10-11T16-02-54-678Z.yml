@@ -1,0 +1,108 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - link "PORTFOLIO" [ref=e4] [cursor=pointer]:
+      - /url: /
+    - generic [ref=e5]:
+      - link "About" [ref=e7] [cursor=pointer]:
+        - /url: "#about"
+      - link "Projects" [ref=e9] [cursor=pointer]:
+        - /url: "#projects"
+      - link "Contact" [ref=e11] [cursor=pointer]:
+        - /url: "#contact"
+  - main [ref=e12]:
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - heading "Hi! I'm Arif Prasetyo" [level=1] [ref=e17]
+        - heading "VISUAL POETRY TRAPPED INSIDE AN ENGINEER'S MIND" [level=2] [ref=e18]:
+          - generic [ref=e19]: VISUAL POETRY TRAPPED
+          - generic [ref=e20]: INSIDE AN ENGINEER'S MIND
+      - generic [ref=e21]:
+        - heading "FULL STACK ENGINEER" [level=4] [ref=e23]
+        - generic [ref=e24]:
+          - heading "BASED IN" [level=4] [ref=e26]
+          - heading "SURAKARTA, INDONESIA" [level=4] [ref=e28]
+    - generic [ref=e29]:
+      - heading "I’m Arif, a Full Stack Engineer with a Frontend soul, turning logic into visual poetry." [level=2] [ref=e30]
+      - paragraph [ref=e31]: From scalable architectures to expressive user interfaces, I build products that balance engineering precision with visual intention.
+      - link [ref=e32] [cursor=pointer]:
+        - /url: /about-me
+        - button [ref=e33]:
+          - generic [ref=e34]: More About Me
+          - generic [ref=e37]: More About Me
+    - region [ref=e40]:
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - heading "Selected works." [level=2] [ref=e43]
+          - paragraph [ref=e44]:
+            - generic [ref=e45]: Web
+            - generic [ref=e46]: platforms,
+            - generic [ref=e47]: built
+            - generic [ref=e48]: for
+            - generic [ref=e49]: real
+            - generic [ref=e50]: work.
+        - generic [ref=e51]:
+          - link [ref=e52] [cursor=pointer]:
+            - /url: /project/etix
+            - img "Etix project preview" [ref=e55]
+            - generic [ref=e57]:
+              - heading "Etix" [level=3] [ref=e58]
+              - paragraph [ref=e59]: Event ticketing platform for concerts and festivals in Malaysia.
+              - generic [ref=e60]: Frontend Engineer / Alpha Red Solutions
+          - link [ref=e65] [cursor=pointer]:
+            - /url: /project/repo-alpha-red-group-portal
+            - img "Orbyte project preview" [ref=e68]
+            - generic [ref=e70]:
+              - heading "Orbyte" [level=3] [ref=e71]
+              - paragraph [ref=e72]: Internal HRIS portal for Alpha Red Group's regional workforce.
+              - generic [ref=e73]: Frontend Engineer / Alpha Red Solutions
+          - link [ref=e78] [cursor=pointer]:
+            - /url: /project/legal-plus
+            - img "Legal Plus project preview" [ref=e81]
+            - generic [ref=e83]:
+              - heading "Legal Plus" [level=3] [ref=e84]
+              - paragraph [ref=e85]: Cloud-based legal practice management for Indonesian firms.
+              - generic [ref=e86]: Full Stack Engineer / Legal Plus
+          - link [ref=e91] [cursor=pointer]:
+            - /url: /project/playfields
+            - img "Playfields project preview" [ref=e94]
+            - generic [ref=e96]:
+              - heading "Playfields" [level=3] [ref=e97]
+              - paragraph [ref=e98]: Multi-tenant SaaS for sports venue management.
+              - generic [ref=e99]: Full Stack Developer / Playfields
+          - link [ref=e104] [cursor=pointer]:
+            - /url: /project/kubu-id
+            - img "Kubu.id project preview" [ref=e107]
+            - generic [ref=e109]:
+              - heading "Kubu.id" [level=3] [ref=e110]
+              - paragraph [ref=e111]: Community and job platform for professionals.
+              - generic [ref=e112]: Full Stack Developer / Business Watch Indonesia
+          - link [ref=e117] [cursor=pointer]:
+            - /url: /project/bisnislink
+            - img "BisnisLink project preview" [ref=e120]
+            - generic [ref=e122]:
+              - heading "BisnisLink" [level=3] [ref=e123]
+              - paragraph [ref=e124]: The e-commerce platform connecting SME suppliers with verified resellers.
+              - generic [ref=e125]: Full Stack Developer / Business Watch Indonesia
+    - generic [ref=e131]:
+      - heading "LET'S TAAAAAALLLKKK!" [level=3] [ref=e132]
+      - link [ref=e133] [cursor=pointer]:
+        - /url: mailto:arif.wpras@gmail.com
+        - button [ref=e134]:
+          - generic [ref=e135]: CONTACT NOW
+          - generic [ref=e138]: CONTACT NOW
+      - img "Profile of Arif Prasetyo" [ref=e141]
+      - generic [ref=e142]:
+        - link "LINKEDIN" [ref=e144] [cursor=pointer]:
+          - /url: https://linkedin.com/in/arif-wahyu-prasetyo
+        - link "GITHUB" [ref=e149] [cursor=pointer]:
+          - /url: https://github.com/arifwp
+      - generic [ref=e153]:
+        - paragraph [ref=e154]: ©2026 ARIF PRASETYO
+        - paragraph [ref=e155]: GO BACK TO TOP
+  - generic [ref=e157]:
+    - link "About" [ref=e158] [cursor=pointer]:
+      - /url: "#about"
+    - link "Projects" [ref=e159] [cursor=pointer]:
+      - /url: "#projects"
+    - link "Contact" [ref=e160] [cursor=pointer]:
+      - /url: "#contact"

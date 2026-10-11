@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import { HTMLMotionProps, motion } from "framer-motion";
 
-interface Props extends HTMLMotionProps<"button"> {
+interface Props extends HTMLMotionProps<"span"> {
   title: string;
   iconEnd?: React.ReactNode;
   className?: string;
@@ -16,7 +16,7 @@ export const ButtonAnimatedHover = ({
   ...rest
 }: Props) => {
   return (
-    <motion.button
+    <motion.span
       whileHover="hover"
       initial="rest"
       animate="rest"
@@ -27,7 +27,7 @@ export const ButtonAnimatedHover = ({
       {...rest}
     >
       {/* Background layer */}
-      <motion.div
+      <motion.span
         variants={{
           rest: { y: "110%" },
           hover: { y: "0%" },
@@ -50,6 +50,7 @@ export const ButtonAnimatedHover = ({
 
       {/* Text hover */}
       <motion.span
+        aria-hidden="true"
         variants={{
           rest: { y: "120%" },
           hover: { y: "0%" },
@@ -59,6 +60,6 @@ export const ButtonAnimatedHover = ({
       >
         {title} {iconEnd && iconEnd}
       </motion.span>
-    </motion.button>
+    </motion.span>
   );
 };

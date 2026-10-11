@@ -25,7 +25,7 @@ export const InfoRow = ({
     >
       <p className="text-md font-bold text-neutral-500">{label}</p>
 
-      <h3 className="text-md font-bold text-neutral-950">{value}</h3>
+      <p className="text-md font-bold text-neutral-950">{value}</p>
     </motion.div>
 
     {/* BORDER */}

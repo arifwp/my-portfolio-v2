@@ -1,3 +1,4 @@
+import { JsonLd } from "@/components/JsonLd";
 import { ContainerLayout } from "@/components/containers/ContainerLayout";
 import { projects } from "@/constants/projects";
 import {
@@ -17,9 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
-    return {
-      title: "Project Not Found",
-    };
+    notFound();
   }
 
   return generateProjectMetadata(project);
@@ -43,10 +42,7 @@ export default async function ProjectLayout({ params, children }: Props) {
 
   return (
     <ContainerLayout>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd data={jsonLd} />
       {children}
     </ContainerLayout>
   );

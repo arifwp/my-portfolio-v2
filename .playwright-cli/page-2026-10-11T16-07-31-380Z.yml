@@ -1,0 +1,105 @@
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e2]:
+    - navigation [ref=f3e3]:
+      - link "PORTFOLIO" [ref=f3e4] [cursor=pointer]:
+        - /url: /
+    - main [ref=f3e5]:
+      - generic [ref=f3e7]:
+        - generic [ref=f3e8]:
+          - heading "Arif Wahyu Prasetyo · Software Engineer" [level=1] [ref=f3e10]
+          - heading "VISUAL POETRY TRAPPED INSIDE AN ENGINEER'S MIND" [level=2] [ref=f3e11]:
+            - generic [ref=f3e12]: VISUAL POETRY TRAPPED
+            - generic [ref=f3e14]: INSIDE AN ENGINEER'S MIND
+        - generic [ref=f3e16]:
+          - paragraph [ref=f3e18]: SOFTWARE ENGINEER
+          - generic [ref=f3e19]:
+            - paragraph [ref=f3e21]: BASED IN
+            - paragraph [ref=f3e23]: SURAKARTA, INDONESIA
+      - generic [ref=f3e24]:
+        - heading "I’m Arif, a Software Engineer with a Frontend soul, turning logic into visual poetry." [level=2] [ref=f3e25]
+        - paragraph [ref=f3e26]: I’m based in Surakarta, Indonesia, and build web applications with React, Next.js, and TypeScript. My work spans event ticketing, business portals, and sports venue booking platforms.
+        - link [ref=f3e27] [cursor=pointer]:
+          - /url: /about-me
+          - generic [ref=f3e28]:
+            - generic [ref=f3e30]: More About Me
+            - generic [aria-hidden] [ref=f3e33]: More About Me
+      - region [ref=f3e36]:
+        - generic [ref=f3e37]:
+          - generic [ref=f3e38]:
+            - heading "Selected works." [level=2] [ref=f3e39]
+            - paragraph [ref=f3e40]:
+              - generic [ref=f3e41]: Web
+              - generic [ref=f3e42]: platforms,
+              - generic [ref=f3e43]: built
+              - generic [ref=f3e44]: for
+              - generic [ref=f3e45]: real
+              - generic [ref=f3e46]: work.
+          - generic [ref=f3e47]:
+            - link "Etix project preview Etix Event ticketing platform for concerts and festivals in Malaysia. Frontend Engineer Alpha Red Solutions" [ref=f3e48] [cursor=pointer]:
+              - /url: /project/etix
+              - img "Etix project preview" [ref=f3e51]
+              - generic [ref=f3e53]:
+                - heading "Etix" [level=3] [ref=f3e54]
+                - paragraph [ref=f3e55]: Event ticketing platform for concerts and festivals in Malaysia.
+                - generic [ref=f3e56]: Frontend Engineer / Alpha Red Solutions
+            - link "Orbyte project preview Orbyte Internal HRIS portal for Alpha Red Group's regional workforce. Frontend Engineer Alpha Red Solutions" [ref=f3e61] [cursor=pointer]:
+              - /url: /project/repo-alpha-red-group-portal
+              - img "Orbyte project preview" [ref=f3e64]
+              - generic [ref=f3e66]:
+                - heading "Orbyte" [level=3] [ref=f3e67]
+                - paragraph [ref=f3e68]: Internal HRIS portal for Alpha Red Group's regional workforce.
+                - generic [ref=f3e69]: Frontend Engineer / Alpha Red Solutions
+            - link "Legal Plus project preview Legal Plus Cloud-based legal practice management for Indonesian firms. Software Engineer Legal Plus" [ref=f3e74] [cursor=pointer]:
+              - /url: /project/legal-plus
+              - img "Legal Plus project preview" [ref=f3e77]
+              - generic [ref=f3e79]:
+                - heading "Legal Plus" [level=3] [ref=f3e80]
+                - paragraph [ref=f3e81]: Cloud-based legal practice management for Indonesian firms.
+                - generic [ref=f3e82]: Software Engineer / Legal Plus
+            - link "Playfields project preview Playfields Multi-tenant SaaS for sports venue management. Software Engineer Playfields" [ref=f3e87] [cursor=pointer]:
+              - /url: /project/playfields
+              - img "Playfields project preview" [ref=f3e90]
+              - generic [ref=f3e92]:
+                - heading "Playfields" [level=3] [ref=f3e93]
+                - paragraph [ref=f3e94]: Multi-tenant SaaS for sports venue management.
+                - generic [ref=f3e95]: Software Engineer / Playfields
+            - link "Kubu.id project preview Kubu.id Community and job platform for professionals. Software Engineer Business Watch Indonesia" [ref=f3e100] [cursor=pointer]:
+              - /url: /project/kubu-id
+              - img "Kubu.id project preview" [ref=f3e103]
+              - generic [ref=f3e105]:
+                - heading "Kubu.id" [level=3] [ref=f3e106]
+                - paragraph [ref=f3e107]: Community and job platform for professionals.
+                - generic [ref=f3e108]: Software Engineer / Business Watch Indonesia
+            - link "BisnisLink project preview BisnisLink The e-commerce platform connecting SME suppliers with verified resellers. Software Engineer Business Watch Indonesia" [ref=f3e113] [cursor=pointer]:
+              - /url: /project/bisnislink
+              - img "BisnisLink project preview" [ref=f3e116]
+              - generic [ref=f3e118]:
+                - heading "BisnisLink" [level=3] [ref=f3e119]
+                - paragraph [ref=f3e120]: The e-commerce platform connecting SME suppliers with verified resellers.
+                - generic [ref=f3e121]: Software Engineer / Business Watch Indonesia
+      - generic [ref=f3e127]:
+        - heading "LET'S TAAA AAALLLKKK!" [level=2] [ref=f3e128]:
+          - text: LET'S TAAA
+          - generic [ref=f3e129]: AAALLLKKK!
+        - link [ref=f3e130] [cursor=pointer]:
+          - /url: mailto:arif.wpras@gmail.com
+          - generic [ref=f3e131]:
+            - generic [ref=f3e133]: CONTACT NOW
+            - generic [aria-hidden] [ref=f3e136]: CONTACT NOW
+        - img "Profile of Arif Wahyu Prasetyo" [ref=f3e140]
+        - generic [ref=f3e141]:
+          - link "LINKEDIN" [ref=f3e143] [cursor=pointer]:
+            - /url: https://linkedin.com/in/arif-wahyu-prasetyo
+          - link "GITHUB" [ref=f3e148] [cursor=pointer]:
+            - /url: https://github.com/arifwp
+        - generic [ref=f3e152]:
+          - paragraph [ref=f3e153]: ©2026 ARIF PRASETYO
+          - paragraph [ref=f3e154] [cursor=pointer]: GO BACK TO TOP
+    - generic [ref=f3e156]:
+      - link "About" [ref=f3e157] [cursor=pointer]:
+        - /url: "#about"
+      - link "Projects" [ref=f3e158] [cursor=pointer]:
+        - /url: "#projects"
+      - link "Contact" [ref=f3e159] [cursor=pointer]:
+        - /url: "#contact"
+  - alert [ref=f3e160]

@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 
 export const SectionHome = () => {
   return (
-    <section id="home" className="w-full h-[calc(100dvh-72px)] p-6">
+    <section id="home" className="w-full h-[calc(100dvh-72px)] p-6 pb-28 sm:pb-6">
       <div className="w-full h-full flex flex-col items-center justify-between">
         <div />
 
         <div className="gap-2 md:gap-4 xl:gap-8 flex flex-col text-center">
           <div className="overflow-hidden">
             <motion.h1
-              initial={{ y: "100%" }}
+              initial={false}
               animate={{ y: 0 }}
               transition={{
                 duration: 0.7,
@@ -19,12 +19,12 @@ export const SectionHome = () => {
               }}
               className="text-md sm:text-xl md:text-2xl 2xl:text-4xl font-light"
             >
-              {"Hi! I'm Arif Prasetyo"}
+              {"Arif Wahyu Prasetyo · Software Engineer"}
             </motion.h1>
           </div>
 
           <motion.h2
-            initial="hidden"
+            initial={false}
             animate="show"
             variants={{
               hidden: {},
@@ -69,7 +69,7 @@ export const SectionHome = () => {
         </div>
 
         <motion.div
-          initial="hidden"
+          initial={false}
           animate="show"
           variants={{
             hidden: {},
@@ -80,7 +80,7 @@ export const SectionHome = () => {
           className="w-full gap-0 text-lg xl:text-2xl font-semibold flex flex-col md:flex-row items-center justify-between"
         >
           <div className="overflow-hidden">
-            <motion.h4
+            <motion.p
               variants={{
                 hidden: { y: "100%" },
                 show: {
@@ -92,13 +92,13 @@ export const SectionHome = () => {
                 ease: [0.22, 1, 0.36, 1],
               }}
             >
-              FULL STACK ENGINEER
-            </motion.h4>
+              SOFTWARE ENGINEER
+            </motion.p>
           </div>
 
           <motion.div className="gap-2 flex flex-row items-center">
             <div className="overflow-hidden">
-              <motion.h4
+              <motion.p
                 variants={{
                   hidden: { y: "100%" },
                   show: {
@@ -112,11 +112,11 @@ export const SectionHome = () => {
                 className="text-neutral-500 font-medium"
               >
                 BASED IN
-              </motion.h4>
+              </motion.p>
             </div>
 
             <div className="overflow-hidden">
-              <motion.h4
+              <motion.p
                 variants={{
                   hidden: { y: "100%" },
                   show: {
@@ -129,7 +129,7 @@ export const SectionHome = () => {
                 }}
               >
                 SURAKARTA, INDONESIA
-              </motion.h4>
+              </motion.p>
             </div>
           </motion.div>
         </motion.div>

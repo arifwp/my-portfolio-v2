@@ -53,7 +53,7 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
       <div className="w-full gap-8 flex flex-col lg:flex-row items-center lg:justify-between">
         {/* TITLE & DESC PROJECT */}
         <motion.div
-          initial="hidden"
+          initial={false}
           animate="show"
           variants={{
             hidden: {},
@@ -92,8 +92,11 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
               }}
               className="text-md font-light text-neutral-950"
             >
-              {data.description}
+              {`Arif Wahyu Prasetyo worked as ${data.role} on ${data.title} for ${data.company}. ${data.overview}`}
             </motion.p>
+            <p className="text-md font-light text-neutral-950">
+              {data.description}
+            </p>
           </div>
         </motion.div>
 
@@ -131,7 +134,7 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
 
       {/* IMAGE */}
       <motion.div
-        initial={{ scale: 1.3, opacity: 0 }}
+        initial={false}
         animate={{ scale: 1, opacity: 1 }}
         transition={{
           scale: {
@@ -150,6 +153,7 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
           alt={`${data.title} website preview`}
           fill
           sizes="(max-width: 767px) 100vw, 95vw"
+          preload
           className="object-contain object-top"
         />
       </motion.div>
@@ -158,21 +162,12 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
       <div className="w-full gap-6 md:gap-10 flex flex-col md:flex-row items-start md:justify-between">
         <div className="w-full md:w-1/2 gap-0 flex flex-col shrink-0">
           <div className="overflow-hidden">
-            <motion.p
-              initial={{ y: "100%" }}
-              whileInView={{
-                y: 0,
-              }}
-              transition={{
-                duration: 0.7,
-                ease: [0.22, 1, 0.36, 1],
-                delay: 0.4,
-              }}
-              viewport={{ once: true }}
+            <motion.h2
+              initial={false}
               className="text-2xl font-bold text-neutral-950"
             >
               TECH STACK
-            </motion.p>
+            </motion.h2>
           </div>
           <div className="overflow-hidden">
             <motion.p
@@ -231,21 +226,12 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
       <div className="w-full gap-6 md:gap-10 flex flex-col md:flex-row items-start md:justify-between">
         <div className="w-full md:w-1/2 gap-0 flex flex-col shrink-0">
           <div className="overflow-hidden">
-            <motion.p
-              initial={{ y: "100%" }}
-              whileInView={{
-                y: 0,
-              }}
-              transition={{
-                duration: 0.7,
-                ease: [0.22, 1, 0.36, 1],
-                delay: 0.4,
-              }}
-              viewport={{ once: true }}
+            <motion.h2
+              initial={false}
               className="text-2xl font-bold text-neutral-950"
             >
               My Role
-            </motion.p>
+            </motion.h2>
           </div>
 
           <div className="overflow-hidden">
@@ -283,7 +269,7 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
           className="gap-4 flex flex-row flex-wrap items-center"
         >
           <div className="overflow-hidden">
-            <motion.h5
+            <motion.h3
               initial={{ y: "100%" }}
               whileInView={{
                 y: 0,
@@ -295,7 +281,7 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
               className="text-2xl font-semibold text-neutral-950"
             >
               {data.role}
-            </motion.h5>
+            </motion.h3>
           </div>
 
           {data.task.map((item) => (

@@ -5,6 +5,8 @@ import { ThemeReset } from "@/utils/ThemeReset";
 import type { Metadata } from "next";
 import { Instrument_Sans } from "next/font/google";
 import "./globals.css";
+import { siteUrl, siteName, siteDescription, personName, personJsonLd } from "@/constants/site";
+import { JsonLd } from "@/components/JsonLd";
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",
@@ -13,89 +15,41 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_FRONTEND_URL || "https://arifprasetyo.com",
-  ),
-
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "Arif Wahyu Prasetyo | Full Stack Engineer - Frontend Heavy",
+    default: "Arif Wahyu Prasetyo | Software Engineer",
     template: "%s | Arif Wahyu Prasetyo",
   },
-
-  description:
-    "Full Stack Engineer specializing in Frontend Development. Expert in React, Next.js, TypeScript, and modern web technologies. Building scalable, performant, and user-centric applications.",
-
-  keywords: [
-    "Arif Wahyu Prasetyo",
-    "Full Stack Engineer",
-    "Frontend Developer",
-    "React Developer",
-    "Next.js Expert",
-    "Linkedin Arif Wahyu Prasetyo",
-    "Website Arif Wahyu Prasetyo",
-    "Frontend Engineer",
-    "Jakarta Developer",
-    "Indonesia Developer",
-  ],
-
-  authors: [{ name: "Arif Wahyu Prasetyo" }],
-  creator: "Arif Wahyu Prasetyo",
-
-  manifest: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/icons/site.webmanifest`,
+  description: siteDescription,
+  authors: [{ name: personName, url: siteUrl }],
+  creator: personName,
+  manifest: "/assets/icons/site.webmanifest",
   icons: {
-    icon: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/icons/favicon.ico`,
-    shortcut: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/icons/favicon.ico`,
-    apple: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/icons/apple-touch-icon.png`,
+    icon: "/assets/icons/favicon.ico",
+    shortcut: "/assets/icons/favicon.ico",
+    apple: "/assets/icons/apple-touch-icon.png",
   },
-
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: process.env.NEXT_PUBLIC_FRONTEND_URL,
-    title: "Arif Wahyu Prasetyo | Full Stack Engineer - Frontend Heavy",
-    description:
-      "Full Stack Engineer specializing in Frontend Development. Expert in React, Next.js, TypeScript, and modern web technologies.",
-    siteName: "Arif Wahyu Prasetyo Portfolio",
-    images: [
-      {
-        url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/og-image.jpg`,
-        width: 1200,
-        height: 630,
-        alt: "Arif Wahyu Prasetyo - Full Stack Engineer",
-      },
-    ],
+    title: "Arif Wahyu Prasetyo | Software Engineer",
+    description: siteDescription,
+    siteName,
+    images: [{ url: "/assets/images/og-image.jpg", width: 1200, height: 630, alt: "Arif Wahyu Prasetyo - Software Engineer" }],
   },
-
   twitter: {
     card: "summary_large_image",
-    title: "Arif Wahyu Prasetyo | Full Stack Engineer - Frontend Heavy",
-    description:
-      "Full Stack Engineer specializing in Frontend Development. Expert in React, Next.js, TypeScript, and modern web technologies.",
+    title: "Arif Wahyu Prasetyo | Software Engineer",
+    description: siteDescription,
     creator: "@arifwahyuu_",
-    images: [
-      `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/og-image.jpg`,
-    ],
+    images: ["/assets/images/og-image.jpg"],
   },
-
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+    googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 },
   },
-
-  verification: {
-    google: "8L6RJpy3wq2q_kMq4qWpJHQgB0G2QmDE8KEiIo8z_WE",
-  },
-
-  alternates: {
-    canonical: process.env.NEXT_PUBLIC_FRONTEND_URL,
-  },
+  verification: { google: "8L6RJpy3wq2q_kMq4qWpJHQgB0G2QmDE8KEiIo8z_WE" },
 };
 
 export default function RootLayout({
@@ -103,42 +57,21 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Arif Wahyu Prasetyo",
-    jobTitle: "Full Stack Engineer",
-    description: "Full Stack Engineer specializing in Frontend Development",
-    url: process.env.NEXT_PUBLIC_FRONTEND_URL,
-    sameAs: [
-      "https://github.com/arifwp",
-      "https://linkedin.com/in/arif-wahyu-prasetyo",
-      "https://x.com/arifwahyuu_",
-    ],
-    image: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/assets/images/og-image.jpg`,
-    alumniOf: {
-      "@type": "Organization",
-      name: "Universitas Amikom Yogyakarta",
-    },
-    knowsAbout: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "JavaScript",
-      "Frontend Development",
-      "Full Stack Engineer",
-      "Tailwind CSS",
-      "Node.js",
-    ],
-  };
 
   return (
     <html lang="en">
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <JsonLd data={{
+          "@context": "https://schema.org",
+          "@graph": [personJsonLd, {
+            "@type": "WebSite",
+            "@id": `${siteUrl}/#website`,
+            url: `${siteUrl}/`,
+            name: siteName,
+            inLanguage: "en",
+            publisher: { "@id": `${siteUrl}/#person` },
+          }],
+        }} />
       </head>
       <body className={`${instrumentSans.variable} antialiased`}>
         <ThemeProvider>

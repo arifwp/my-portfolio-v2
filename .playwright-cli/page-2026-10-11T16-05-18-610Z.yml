@@ -1,0 +1,111 @@
+- generic [active] [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - navigation [ref=f2e3]:
+      - link "PORTFOLIO" [ref=f2e4] [cursor=pointer]:
+        - /url: /
+    - main [ref=f2e5]:
+      - generic [ref=f2e6]:
+        - generic [ref=f2e7]:
+          - generic [ref=f2e8]:
+            - heading "Etix" [level=1] [ref=f2e10]
+            - generic [ref=f2e11]:
+              - paragraph [ref=f2e12]: Arif Wahyu Prasetyo worked as Frontend Engineer on Etix for Alpha Red Solutions. Event ticketing platform for concerts and festivals in Malaysia.
+              - paragraph [ref=f2e13]: Etix is a ticketing platform serving concerts, festivals, and live events across Malaysia. The platform handles ticket availability, reservations, bookings, and payment processing for event organizers and attendees. As part of a company wide migration effort, the frontend was rebuilt from Vue.js to React with TanStack Start, moving revenue critical customer flows onto a modern, more maintainable stack without disrupting live ticket sales.
+          - generic [ref=f2e14]:
+            - generic [ref=f2e16]:
+              - paragraph [ref=f2e17]: COMPANY
+              - heading "Alpha Red Solutions" [level=3] [ref=f2e18]
+            - generic [ref=f2e20]:
+              - paragraph [ref=f2e21]: PERIODE
+              - heading "Apr 2026 - Present" [level=3] [ref=f2e22]
+            - generic [ref=f2e24]:
+              - paragraph [ref=f2e25]: LIVE PROJECT
+              - heading [level=3] [ref=f2e26]:
+                - link "VISIT SITE" [ref=f2e27] [cursor=pointer]:
+                  - /url: https://book.etix.my/home-revamp
+        - img "Etix website preview" [ref=f2e29]
+        - generic [ref=f2e30]:
+          - generic [ref=f2e31]:
+            - heading "TECH STACK" [level=2] [ref=f2e33]
+            - paragraph [ref=f2e35]: Technologies and tools used to bring this project to life
+          - generic [ref=f2e36]:
+            - paragraph [ref=f2e38]: React
+            - paragraph [ref=f2e40]: TanStack Start
+            - paragraph [ref=f2e42]: TypeScript
+            - paragraph [ref=f2e44]: Tailwind CSS
+            - paragraph [ref=f2e46]: REST API
+            - paragraph [ref=f2e48]: Vite
+            - paragraph [ref=f2e50]: Microsoft Azure
+            - paragraph [ref=f2e52]: Git
+        - generic [ref=f2e53]:
+          - generic [ref=f2e54]:
+            - heading "My Role" [level=2] [ref=f2e56]
+            - paragraph [ref=f2e58]: My contributions and responsibilities in this project
+          - generic [ref=f2e59]:
+            - heading "Frontend Engineer" [level=3] [ref=f2e61]
+            - list [ref=f2e62]:
+              - listitem [ref=f2e63]: Served as the sole frontend engineer on an end-to-end migration from Vue.js to React and TanStack Start, rebuilding 5 revenue critical customer journeys without interrupting live ticket sales.
+            - list [ref=f2e64]:
+              - listitem [ref=f2e65]: Integrated Store APIs powering ticket availability, reservations, bookings, and payment, replacing legacy Vue data flows with typed React and TanStack Start patterns.
+            - list [ref=f2e66]:
+              - listitem [ref=f2e67]: Fixed reliability issues across 6 production critical areas including session expiration, real-time inventory caching, booking re-entry, payment recovery, API contract mismatches, and React rendering performance.
+            - list [ref=f2e68]:
+              - listitem [ref=f2e69]: Rebuilt checkout and booking flows to handle high concurrency ticket releases, reducing stale inventory states during peak traffic windows.
+            - list [ref=f2e70]:
+              - listitem [ref=f2e71]: Worked directly with backend and product teams across the APAC region to align migration scope with zero downtime requirements on a live commercial platform.
+        - img [ref=f2e73]:
+          - generic [ref=f2e76]: Explore Other Projects ✦ Portfolio Of Arif Prasetyo ✦Explore Other Projects ✦ Portfolio Of Arif Prasetyo ✦Explore Other Projects ✦ Portfolio Of Arif Prasetyo ✦
+        - navigation [ref=f2e79]:
+          - link "Orbyte Orbyte Orbyte Orbyte Orbyte" [ref=f2e80] [cursor=pointer]:
+            - /url: /project/repo-alpha-red-group-portal
+            - generic [ref=f2e81]: Orbyte
+            - generic:
+              - generic:
+                - generic: Orbyte
+                - generic: Orbyte
+                - generic: Orbyte
+                - generic: Orbyte
+          - link "Legal Plus Legal Plus Legal Plus Legal Plus Legal Plus" [ref=f2e82] [cursor=pointer]:
+            - /url: /project/legal-plus
+            - generic [ref=f2e83]: Legal Plus
+            - generic:
+              - generic:
+                - generic: Legal Plus
+                - generic: Legal Plus
+                - generic: Legal Plus
+                - generic: Legal Plus
+          - link "Playfields Playfields Playfields Playfields Playfields" [ref=f2e84] [cursor=pointer]:
+            - /url: /project/playfields
+            - generic [ref=f2e85]: Playfields
+            - generic:
+              - generic:
+                - generic: Playfields
+                - generic: Playfields
+                - generic: Playfields
+                - generic: Playfields
+          - link "Kubu.id Kubu.id Kubu.id Kubu.id Kubu.id" [ref=f2e86] [cursor=pointer]:
+            - /url: /project/kubu-id
+            - generic [ref=f2e87]: Kubu.id
+            - generic:
+              - generic:
+                - generic: Kubu.id
+                - generic: Kubu.id
+                - generic: Kubu.id
+                - generic: Kubu.id
+          - link "BisnisLink BisnisLink BisnisLink BisnisLink BisnisLink" [ref=f2e88] [cursor=pointer]:
+            - /url: /project/bisnislink
+            - generic [ref=f2e89]: BisnisLink
+            - generic:
+              - generic:
+                - generic: BisnisLink
+                - generic: BisnisLink
+                - generic: BisnisLink
+                - generic: BisnisLink
+    - generic [ref=f2e91]:
+      - link "About" [ref=f2e92] [cursor=pointer]:
+        - /url: "#about"
+      - link "Projects" [ref=f2e93] [cursor=pointer]:
+        - /url: "#projects"
+      - link "Contact" [ref=f2e94] [cursor=pointer]:
+        - /url: "#contact"
+  - alert [ref=f2e95]

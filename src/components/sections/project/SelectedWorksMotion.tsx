@@ -21,7 +21,7 @@ export function SelectedWorksMotion({
       const media = gsap.matchMedia();
       media.add("(prefers-reduced-motion: no-preference)", () => {
         gsap.from("[data-work-word]", {
-          opacity: 0.25,
+          opacity: 0.75,
           stagger: 0.1,
           scrollTrigger: {
             trigger: "[data-work-intro]",

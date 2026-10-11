@@ -6,7 +6,7 @@ export interface VelocityMapping {
 }
 
 const MARQUEE_TEXTS: string[] = [
-  " Arif Prasetyo ✦ Full Stack Engineer ✦ Frontend Heavy ✦ ",
+  " Arif Prasetyo ✦ Software Engineer ✦ Frontend Heavy ✦ ",
 ];
 const MARQUEE_CONFIG = {
   velocity: 100,

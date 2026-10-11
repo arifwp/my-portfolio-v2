@@ -132,7 +132,7 @@ export default function AboutMePage() {
         <div className="w-full p-6 gap-4 flex flex-col text-lg">
           <div className="overflow-hidden">
             <motion.h1
-              initial={{ y: "100%" }}
+              initial={false}
               animate={{ y: 0 }}
               transition={{
                 duration: 0.7,
@@ -145,7 +145,7 @@ export default function AboutMePage() {
           </div>
 
           <motion.div
-            initial="hidden"
+            initial={false}
             animate="show"
             variants={{
               hidden: {},
@@ -165,7 +165,7 @@ export default function AboutMePage() {
                 ease: [0.22, 1, 0.36, 1],
               }}
             >
-              {`I'm a Full Stack Engineer with a visual poetry soul living inside an engineer's mind. I think in systems, but I feel in interfaces, where logic becomes rhythm, structure becomes motion, and code becomes experience.`}
+              {`I'm Arif Wahyu Prasetyo, a Software Engineer focused on frontend development, based in Surakarta, Indonesia. I build web applications with React, Next.js, and TypeScript, combining system design with expressive user interfaces.`}
             </motion.p>
 
             <motion.p
@@ -211,7 +211,7 @@ export default function AboutMePage() {
             }}
           >
             <Link
-              href={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/resume`}
+              href="/resume"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -332,9 +332,9 @@ export default function AboutMePage() {
                 <Image
                   src={"/assets/images/og-image.jpg"}
                   alt="Image of Arif Prasetyo"
-                  objectFit="cover"
+                  className="object-cover"
                   fill
-                  priority
+                  sizes="(max-width: 768px) 100vw, 100vw"
                 />
               </motion.div>
 
@@ -358,6 +358,7 @@ export default function AboutMePage() {
                           src={item.companyLogo}
                           alt={item.companyName}
                           fill
+                          sizes="80px"
                         />
                       </div>
 

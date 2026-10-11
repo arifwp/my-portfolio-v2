@@ -2,6 +2,7 @@
 
 import { gsap } from "gsap";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 export interface MenuItemData {
@@ -135,6 +136,7 @@ export const FlowingMenuItem = ({ link, text, image }: MenuItemData) => {
       {/* MARQUEE ON HOVER */}
       <div
         ref={marqueeRef}
+        aria-hidden="true"
         className="absolute top-0 left-0 w-full h-full bg-white overflow-hidden pointer-events-none translate-y-[101%]"
       >
         <div className="h-full w-fit flex" ref={marqueeInnerRef}>
@@ -147,9 +149,10 @@ export const FlowingMenuItem = ({ link, text, image }: MenuItemData) => {
                 {text}
               </span>
               <div
-                className="w-50 h-[7dvh] my-[2em] mx-[2vw] py-[1em] rounded-[50px] bg-cover bg-center"
-                style={{ backgroundImage: `url(${image})` }}
-              />
+                className="relative w-50 h-[7dvh] my-[2em] mx-[2vw] py-[1em] rounded-[50px] overflow-hidden"
+              >
+                <Image src={image} alt="" fill sizes="200px" className="object-cover" />
+              </div>
             </div>
           ))}
         </div>

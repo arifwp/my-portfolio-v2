@@ -29,10 +29,10 @@ export const SectionContact = () => {
   return (
     <section id="contact" className="relative w-full scroll-mt-18">
       <div className="min-h-[calc(100vh-96px)] p-6 gap-12 flex flex-col items-center px-6">
-        <h3 className="gap-4 flex flex-col text-center text-5xl sm:text-7xl md:text-8xl font-bold text-neutral-950">
+        <h2 className="gap-4 flex flex-col text-center text-5xl sm:text-7xl md:text-8xl font-bold text-neutral-950">
           {"LET'S TAAA"}
           <span>AAALLLKKK!</span>
-        </h3>
+        </h2>
 
         <Link
           href="mailto:arif.wpras@gmail.com"
@@ -51,7 +51,8 @@ export const SectionContact = () => {
           <Image
             src={"/assets/images/portrait-arif-prasetyo.webp"}
             fill
-            alt="Profile of Arif Prasetyo"
+            alt="Profile of Arif Wahyu Prasetyo"
+            sizes="(max-width: 767px) 256px, 400px"
             className="object-cover object-top"
           />
         </div>

@@ -35,6 +35,10 @@ export const skills: SkillCategory[] = [
         name: "React.js",
       },
       {
+        id: 1,
+        name: "Tanstack Start",
+      },
+      {
         id: 7,
         name: "Next.js",
       },

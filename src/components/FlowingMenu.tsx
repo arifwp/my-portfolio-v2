@@ -13,9 +13,9 @@ export const FlowingMenu = ({ slug }: { slug: string }) => {
         onMouseEnter={() => setVariant("project")}
         onMouseLeave={() => setVariant("default")}
       >
-        {anotherProjects.map((item, idx) => (
+        {anotherProjects.map((item) => (
           <FlowingMenuItem
-            key={idx}
+            key={item.slug}
             link={item.internalLink}
             text={item.title}
             image={item.image}

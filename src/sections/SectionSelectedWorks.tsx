@@ -49,7 +49,6 @@ export const SectionSelectedWorks = () => {
             <Link
               href={`/project/${project.slug}`}
               key={project.id}
-              aria-labelledby={`work-${project.slug}`}
               className={`${styles.card} min-w-0 rounded-md sm:col-span-6`}
             >
               <div className={styles.previewFrame}>

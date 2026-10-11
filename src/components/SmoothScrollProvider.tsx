@@ -1,7 +1,6 @@
 "use client";
 
 import Lenis from "lenis";
-import { ReactLenis } from "lenis/react";
 import { useEffect, useRef } from "react";
 
 export const SmoothScrollProvider = ({
@@ -12,6 +11,8 @@ export const SmoothScrollProvider = ({
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
     // Initialize Lenis
     lenisRef.current = new Lenis({
       duration: 1.2,
@@ -25,23 +26,20 @@ export const SmoothScrollProvider = ({
     });
 
     // Request animation frame loop
+    let frameId: number;
     function raf(time: number) {
       lenisRef.current?.raf(time);
-      requestAnimationFrame(raf);
+      frameId = requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf);
+    frameId = requestAnimationFrame(raf);
 
     // Cleanup
     return () => {
+      cancelAnimationFrame(frameId);
       lenisRef.current?.destroy();
     };
   }, []);
 
-  return (
-    <>
-      <ReactLenis />
-      {children}
-    </>
-  );
+  return <>{children}</>;
 };
