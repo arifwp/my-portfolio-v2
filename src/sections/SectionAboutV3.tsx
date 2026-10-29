@@ -10,14 +10,15 @@ export const SectionAboutV3 = () => {
     >
       <h2 className="text-2xl lg:text-4xl font-semibold text-center">
         {
-          "I’m Arif, a Software Engineer with a Frontend soul, turning logic into visual poetry."
+          "I’m Arif, a Software Engineer building SaaS, booking platforms, and payment workflows."
         }
       </h2>
 
       <p className="text-lg lg:text-2xl text-center">
-        I’m based in Surakarta, Indonesia, and build web applications with React,
-        Next.js, and TypeScript. My work spans event ticketing, business portals,
-        and sports venue booking platforms.
+        I’m based in Boyolali, Indonesia, with 3+ years of experience. I
+        specialize in React, TanStack Start, Next.js, and TypeScript, with
+        full-stack experience in Laravel, Node.js, Express.js, PostgreSQL, and
+        MySQL.
       </p>
 
       <Link href={"/about-me"}>

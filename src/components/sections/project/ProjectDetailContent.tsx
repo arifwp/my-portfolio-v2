@@ -2,7 +2,7 @@
 
 import CurvedLoop from "@/components/CurvedLoop";
 import { FlowingMenu } from "@/components/FlowingMenu";
-import { Project } from "@/constants/projects";
+import { type Project, projectSummary } from "@/constants/projects";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -73,7 +73,7 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
                 duration: 0.7,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="text-6xl font-bold text-neutral-950"
+              className="text-5xl sm:text-6xl font-bold text-neutral-950"
             >
               {data.title}
             </motion.h1>
@@ -92,7 +92,7 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
               }}
               className="text-md font-light text-neutral-950"
             >
-              {`Arif Wahyu Prasetyo worked as ${data.role} on ${data.title} for ${data.company}. ${data.overview}`}
+              {projectSummary(data)}
             </motion.p>
             <p className="text-md font-light text-neutral-950">
               {data.description}
@@ -110,7 +110,7 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
               },
             },
           }}
-          initial="hidden"
+          initial={false}
           animate="show"
           className="w-full lg:w-1/3 flex flex-col gap-4"
         >
@@ -171,7 +171,7 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
           </div>
           <div className="overflow-hidden">
             <motion.p
-              initial={{ y: "100%" }}
+              initial={false}
               whileInView={{
                 y: 0,
               }}
@@ -189,7 +189,7 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
         </div>
 
         <motion.div
-          initial="hidden"
+          initial={false}
           whileInView="show"
           viewport={{ once: true }}
           variants={{
@@ -236,7 +236,7 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
 
           <div className="overflow-hidden">
             <motion.p
-              initial={{ y: "100%" }}
+              initial={false}
               whileInView={{
                 y: 0,
               }}
@@ -254,7 +254,7 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
         </div>
 
         <motion.div
-          initial="hidden"
+          initial={false}
           whileInView="show"
           viewport={{ once: true }}
           variants={{
@@ -270,7 +270,7 @@ export const ProjectDetailContent = ({ data }: { data: Project }) => {
         >
           <div className="overflow-hidden">
             <motion.h3
-              initial={{ y: "100%" }}
+              initial={false}
               whileInView={{
                 y: 0,
               }}

@@ -165,7 +165,7 @@ export default function AboutMePage() {
                 ease: [0.22, 1, 0.36, 1],
               }}
             >
-              {`I'm Arif Wahyu Prasetyo, a Software Engineer focused on frontend development, based in Surakarta, Indonesia. I build web applications with React, Next.js, and TypeScript, combining system design with expressive user interfaces.`}
+              {`I'm Arif Wahyu Prasetyo, a Software Engineer based in Boyolali, Indonesia, with 3+ years of experience building SaaS applications, booking platforms, and payment workflows.`}
             </motion.p>
 
             <motion.p
@@ -178,11 +178,9 @@ export default function AboutMePage() {
                 ease: [0.22, 1, 0.36, 1],
               }}
             >
-              I enjoy turning complex logic into clear, expressive experiences,
-              building interfaces that move with intention and systems that
-              quietly do their job. From interaction design to backend
-              structure, every layer exists to serve clarity, performance, and
-              meaning.
+              I specialize in React, TanStack Start, Next.js, and TypeScript,
+              with full-stack experience in Laravel, Node.js, Express.js, REST
+              APIs, PostgreSQL, and MySQL.
             </motion.p>
 
             <motion.p
@@ -195,9 +193,10 @@ export default function AboutMePage() {
                 ease: [0.22, 1, 0.36, 1],
               }}
             >
-              At the core, I build digital products where engineering precision
-              and visual intention coexist, software that works beautifully, and
-              feels effortless to use.
+              At Alpha Red Solutions, I work on a ticketing frontend migration
+              and workforce-management features. My earlier work includes
+              multi-tenant venue booking, subscription payments, and role-based
+              access controls.
             </motion.p>
           </motion.div>
 
@@ -210,11 +209,7 @@ export default function AboutMePage() {
               delay: 0.4,
             }}
           >
-            <Link
-              href="/resume"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="/resume" target="_blank" rel="noopener noreferrer">
               <ButtonAnimatedHover
                 title="RESUME"
                 iconEnd={
@@ -229,8 +224,8 @@ export default function AboutMePage() {
         <div className="w-full p-6 gap-12 flex flex-col">
           <div className="w-full gap-1 flex flex-col">
             <motion.div className="overflow-hidden">
-              <motion.p
-                initial={{ y: "100%" }}
+              <motion.h2
+                initial={false}
                 animate={{ y: 0 }}
                 transition={{
                   duration: 0.7,
@@ -238,12 +233,12 @@ export default function AboutMePage() {
                 }}
                 className="text-3xl font-semibold"
               >
-                The Engine Behind The Poetry
-              </motion.p>
+                Skills & Technologies
+              </motion.h2>
             </motion.div>
 
             <motion.p
-              initial={{ opacity: 0 }}
+              initial={false}
               animate={{ opacity: 1 }}
               transition={{
                 duration: 0.7,
@@ -252,14 +247,13 @@ export default function AboutMePage() {
               }}
               className="text-lg"
             >
-              Behind every visual decision is a system built with intention.
-              This is the technology I use to shape ideas into experiences,
-              structured, scalable, and quietly expressive.
+              My toolkit spans frontend development, backend integrations,
+              databases, deployment, and system design.
             </motion.p>
           </div>
 
           <motion.div
-            initial="hidden"
+            initial={false}
             animate="show"
             variants={{
               hidden: {},
@@ -267,13 +261,13 @@ export default function AboutMePage() {
                 transition: { staggerChildren: 0.1, delayChildren: 0.1 },
               },
             }}
-            className="w-full gap-4 grid grid-cols-2 lg:grid-cols-4"
+            className="w-full gap-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
           >
             {skills.map((item) => (
               <div key={item.id} className="gap-4 flex flex-col">
                 {/* SKILL CATEGORY */}
                 <div className="overflow-hidden">
-                  <motion.p
+                  <motion.h3
                     variants={{
                       hidden: { y: "100%" },
                       show: { y: 0 },
@@ -281,7 +275,7 @@ export default function AboutMePage() {
                     className="text-lg font-semibold"
                   >
                     {item.name}
-                  </motion.p>
+                  </motion.h3>
                 </div>
 
                 {/* SKILL LIST */}
@@ -340,33 +334,33 @@ export default function AboutMePage() {
 
               {/* CONTENT BODY */}
               <div className="w-full p-6 gap-12 flex flex-col items-start text-neutral-950 dark:text-white">
-                <p className="max-w-2xl text-2xl font-medium">
-                  Hands-on experience building and scaling real-world web
-                  applications across multiple industries, focusing on
-                  performance, maintainability, and business impact.
-                </p>
+                <h2 className="text-3xl font-semibold">
+                  Professional Experience
+                </h2>
 
-                <motion.div className="w-full gap-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <motion.div className="w-full gap-6 grid grid-cols-1 lg:grid-cols-2">
                   {experiences.map((item) => (
                     <div
                       key={item.id}
-                      className="p-12 gap-6 border border-neutral-500 rounded-2xl flex flex-col items-start"
+                      className="min-w-0 p-6 md:p-8 gap-6 border border-neutral-500 rounded-2xl flex flex-col items-start"
                     >
                       {/* COMPANY LOGO */}
-                      <div className="relative w-20 h-20 aspect-square rounded-2xl overflow-hidden">
-                        <Image
-                          src={item.companyLogo}
-                          alt={item.companyName}
-                          fill
-                          sizes="80px"
-                        />
-                      </div>
+                      {item.companyLogo && (
+                        <div className="relative w-20 h-20 aspect-square rounded-2xl overflow-hidden">
+                          <Image
+                            src={item.companyLogo}
+                            alt={item.companyName}
+                            fill
+                            sizes="80px"
+                          />
+                        </div>
+                      )}
 
                       {/* COMPANY */}
                       <div className="gap-0 flex flex-col">
-                        <p className="mb-2 text-xl font-semibold text-start">
+                        <h3 className="mb-2 text-xl font-semibold text-start">
                           {item.companyName}
-                        </p>
+                        </h3>
 
                         <p className="text-base">{item.role}</p>
 
@@ -383,10 +377,16 @@ export default function AboutMePage() {
                       {/* COMPANY OVERVIEW */}
                       <p className="text-sm">{item.companyOverview}</p>
 
+                      <ul className="list-disc pl-5 space-y-3 text-base">
+                        {item.highlights.map((highlight) => (
+                          <li key={highlight}>{highlight}</li>
+                        ))}
+                      </ul>
+
                       {/* RELATED PROJECTS */}
-                      <div className="w-full gap-1 flex items-center">
+                      <div className="w-full gap-2 flex flex-wrap items-baseline">
                         <p className="text-base font-medium leading-none">
-                          Related Projects:
+                          Related projects
                         </p>
 
                         <p className="text-sm">
@@ -412,6 +412,21 @@ export default function AboutMePage() {
                     </div>
                   ))}
                 </motion.div>
+
+                <section
+                  className="w-full max-w-2xl space-y-3"
+                  aria-labelledby="education-title"
+                >
+                  <h2 id="education-title" className="text-3xl font-semibold">
+                    Education
+                  </h2>
+                  <h3 className="text-xl font-semibold">
+                    Amikom University Yogyakarta
+                  </h3>
+                  <p>Bachelor of Science in Informatics</p>
+                  <p>Jan 2019 - Jul 2023 · Sleman, Indonesia</p>
+                  <p>GPA 3.78/4.00</p>
+                </section>
               </div>
             </div>
           </motion.div>

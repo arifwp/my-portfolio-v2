@@ -15,28 +15,28 @@ export const skills: SkillCategory[] = [
     name: "Front End",
     skills: [
       {
-        id: 2,
+        id: 1,
         name: "HTML5",
       },
       {
-        id: 3,
+        id: 2,
         name: "CSS3",
       },
       {
+        id: 3,
+        name: "JavaScript",
+      },
+      {
         id: 4,
-        name: "Javascript",
+        name: "TypeScript",
       },
       {
         id: 5,
-        name: "Typescript",
-      },
-      {
-        id: 6,
         name: "React.js",
       },
       {
-        id: 1,
-        name: "Tanstack Start",
+        id: 6,
+        name: "TanStack Start",
       },
       {
         id: 7,
@@ -44,19 +44,19 @@ export const skills: SkillCategory[] = [
       },
       {
         id: 8,
-        name: "Tailwind CSS",
+        name: "Vite",
       },
       {
         id: 9,
-        name: "Chakra UI",
+        name: "Tailwind CSS",
       },
       {
         id: 10,
-        name: "Shadcn UI",
+        name: "Material UI",
       },
       {
         id: 11,
-        name: "Tanstack Query",
+        name: "TanStack Query",
       },
       {
         id: 12,
@@ -65,194 +65,129 @@ export const skills: SkillCategory[] = [
     ],
   },
   {
-    id: 13,
+    id: 2,
     name: "Back End",
     skills: [
       {
-        id: 14,
+        id: 1,
         name: "Laravel",
       },
       {
-        id: 15,
+        id: 2,
+        name: "Go",
+      },
+      {
+        id: 3,
         name: "Node.js",
       },
       {
-        id: 16,
+        id: 4,
+        name: "Express.js",
+      },
+      {
+        id: 5,
         name: "Supabase",
       },
       {
-        id: 17,
+        id: 6,
         name: "Firebase",
       },
       {
-        id: 18,
-        name: "RESTful API",
+        id: 7,
+        name: "REST API Design",
       },
       {
-        id: 19,
-        name: "Payment Service",
-      },
-      {
-        id: 20,
-        name: "Webhooks",
-      },
-      {
-        id: 21,
-        name: "Microservices Architecture",
+        id: 8,
+        name: "Xendit Payment Integration",
       },
     ],
   },
   {
-    id: 22,
+    id: 3,
     name: "Database",
     skills: [
       {
-        id: 23,
+        id: 1,
         name: "PostgreSQL",
       },
       {
-        id: 24,
+        id: 2,
         name: "MySQL",
-      },
-      {
-        id: 25,
-        name: "Firebase",
-      },
-      {
-        id: 26,
-        name: "Supabase",
       },
     ],
   },
   {
-    id: 27,
+    id: 4,
     name: "Version Control & Deployment",
     skills: [
       {
-        id: 28,
+        id: 1,
         name: "Git",
       },
       {
-        id: 29,
+        id: 2,
         name: "GitHub",
       },
       {
-        id: 30,
-        name: "Vercel",
-      },
-      {
-        id: 31,
-        name: "CI/CD Pipelines",
-      },
-      {
-        id: 32,
+        id: 3,
         name: "Cloud Deployment",
       },
       {
-        id: 33,
-        name: "Play Store Console",
+        id: 4,
+        name: "Azure",
       },
     ],
   },
   {
-    id: 34,
-    name: "Development Methodologies",
+    id: 5,
+    name: "Development Practices & Tools",
     skills: [
       {
-        id: 35,
+        id: 1,
         name: "Agile/Scrum",
       },
       {
-        id: 36,
-        name: "SOLID Principles",
-      },
-      {
-        id: 37,
+        id: 2,
         name: "Code Review",
       },
       {
-        id: 38,
-        name: "API Documentation",
+        id: 3,
+        name: "Performance Optimization",
       },
       {
-        id: 39,
-        name: "Performance Optimization",
+        id: 4,
+        name: "AI-Assisted Development",
+      },
+    ],
+  },
+  {
+    id: 6,
+    name: "System Design",
+    skills: [
+      {
+        id: 1,
+        name: "Server/Client-Side Rendering",
+      },
+      {
+        id: 2,
+        name: "Caching Strategy",
+      },
+      {
+        id: 3,
+        name: "Asynchronous Job Processing",
+      },
+      {
+        id: 4,
+        name: "Real-Time Data Delivery",
+      },
+      {
+        id: 5,
+        name: "API Contract Design",
+      },
+      {
+        id: 6,
+        name: "Modular Service Architecture",
       },
     ],
   },
 ];
-
-// export const skills: Skill[] = [
-//   {
-//     id: 1,
-//     name: "HTML 5",
-//   },
-//   {
-//     id: 2,
-//     name: "CSS 3",
-//   },
-//   {
-//     id: 3,
-//     name: "Javascript",
-//   },
-//   {
-//     id: 4,
-//     name: "Typescript",
-//   },
-//   {
-//     id: 5,
-//     name: "React.js",
-//   },
-//   {
-//     id: 6,
-//     name: "Next.js",
-//   },
-//   {
-//     id: 7,
-//     name: "Tailwind CSS",
-//   },
-//   {
-//     id: 8,
-//     name: "Chakra UI",
-//   },
-//   {
-//     id: 9,
-//     name: "Laravel",
-//   },
-//   {
-//     id: 10,
-//     name: "Node.js",
-//   },
-//   {
-//     id: 11,
-//     name: "Supabase",
-//   },
-//   {
-//     id: 12,
-//     name: "Firebase",
-//   },
-//   {
-//     id: 13,
-//     name: "Payment Service Integrations",
-//   },
-//   {
-//     id: 14,
-//     name: "PostgreSQL",
-//   },
-//   {
-//     id: 15,
-//     name: "MySQL",
-//   },
-//   {
-//     id: 16,
-//     name: "Git",
-//   },
-//   {
-//     id: 17,
-//     name: "Cloud Deployments",
-//   },
-//   {
-//     id: 18,
-//     name: "Agile/Scrum",
-//   },
-// ];

@@ -1,23 +1,21 @@
 export const runtime = "nodejs";
 
-import fs from "fs";
-import path from "path";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 import { NextResponse } from "next/server";
+import { absoluteUrl } from "@/constants/site";
 
 export async function GET() {
   const pdfPath = path.resolve("public/resume-arif-prasetyo.pdf");
 
-  if (!fs.existsSync(pdfPath)) {
-    return new NextResponse("File not found", { status: 404 });
-  }
-
-  const fileBuffer = fs.readFileSync(pdfPath);
+  const fileBuffer = await readFile(pdfPath);
 
   return new NextResponse(fileBuffer, {
     headers: {
       "Content-Type": "application/pdf",
       "Content-Disposition": 'inline; filename="resume-arif-prasetyo.pdf"',
       "Cache-Control": "public, max-age=0, must-revalidate",
+      Link: `<${absoluteUrl("/resume")}>; rel="canonical"`,
     },
   });
 }
