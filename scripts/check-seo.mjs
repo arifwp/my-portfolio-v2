@@ -90,7 +90,7 @@ for (const url of urls) {
   assert.equal(preview.status, 200, `${url.pathname}: preview image`);
   assert(preview.headers.get("content-type")?.startsWith("image/"));
   if (url.pathname === "/project/etix") {
-    assert.equal(previewUrl.pathname, "/assets/images/banner-etix-v3.webp");
+    assert.equal(previewUrl.pathname, "/assets/images/banner-etix-devices.webp");
   }
   assert(!html.includes('hreflang="id-ID"'));
   assert.equal((html.match(/<h1[\s>]/g) || []).length, 1, url.pathname);

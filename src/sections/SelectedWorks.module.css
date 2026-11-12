@@ -48,6 +48,9 @@
   object-fit: cover;
   object-position: top center;
 }
+.projectMockup {
+  object-fit: contain;
+}
 .cover {
   height: 100%;
   display: flex;

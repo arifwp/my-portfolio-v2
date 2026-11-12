@@ -93,9 +93,9 @@ export const projects: Project[] = [
         name: "Git",
       },
     ],
-    image: "/assets/images/banner-etix-v3.webp",
-    mockupPhoneImage: "/assets/images/banner-etix-v3.webp",
-    mockupDesktopImage: "/assets/images/banner-etix-v3.webp",
+    image: "/assets/images/banner-etix-devices.webp",
+    mockupPhoneImage: "/assets/images/banner-etix-devices.webp",
+    mockupDesktopImage: "/assets/images/banner-etix-devices.webp",
     internalLink: "/project/etix",
     keywords: [
       "Etix",

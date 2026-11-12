@@ -16,9 +16,11 @@ function ProjectPreview({ project }: { project: Project }) {
       fill
       sizes="(max-width: 639px) 100vw, 50vw"
       className={
-        project.slug === "etix" || project.slug === "repo-alpha-red-group-portal"
-          ? `${styles.projectImage} ${styles.projectScreenshot}`
-          : styles.projectImage
+        project.slug === "etix"
+          ? `${styles.projectImage} ${styles.projectMockup}`
+          : project.slug === "repo-alpha-red-group-portal"
+            ? `${styles.projectImage} ${styles.projectScreenshot}`
+            : styles.projectImage
       }
     />
   );
