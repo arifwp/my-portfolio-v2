@@ -24,7 +24,7 @@ export interface Project {
 }
 
 export function projectSummary(project: Project) {
-  return `Arif Wahyu Prasetyo worked as ${project.role} on ${project.title} for ${project.company}. ${project.overview}`;
+  return `I worked as a ${project.role} on ${project.title} for ${project.company}. ${project.overview}`;
 }
 
 export const projects: Project[] = [
@@ -44,15 +44,15 @@ export const projects: Project[] = [
     task: [
       {
         id: 1,
-        name: "Migrated the Vue.js ticketing frontend to React and TanStack Start, implementing a 5-stage booking journey.",
+        name: "I migrated the Vue.js ticketing frontend to React and TanStack Start, implementing a 5-stage booking journey.",
       },
       {
         id: 2,
-        name: "Integrated availability, reservation, and payment APIs into the booking workflow.",
+        name: "I integrated availability, reservation, and payment APIs into the booking workflow.",
       },
       {
         id: 3,
-        name: "Deduplicated session checks and eliminated redundant order-detail calls, reducing order-history requests by 30%.",
+        name: "I deduplicated session checks and eliminated redundant order-detail calls, reducing order-history requests by 30%.",
       },
     ],
     techStack: [
@@ -121,15 +121,15 @@ export const projects: Project[] = [
     task: [
       {
         id: 1,
-        name: "Built configurable employee-profile requirements, giving administrators control over required-field rules for 79 fields.",
+        name: "I built configurable employee-profile requirements, giving administrators control over required-field rules for 79 fields.",
       },
       {
         id: 2,
-        name: "Applied the required-field settings across 3 profile-management forms.",
+        name: "I applied the required-field settings across 3 profile-management forms.",
       },
       {
         id: 3,
-        name: "Developed employee claims, profile approvals, and task-reporting features connected to backend APIs.",
+        name: "I developed employee claims, profile approvals, and task-reporting features connected to backend APIs.",
       },
     ],
     techStack: [
@@ -200,15 +200,15 @@ export const projects: Project[] = [
     task: [
       {
         id: 1,
-        name: "Implemented 4 subscription payment flows covering package renewals, upgrades, additional storage, and additional user accounts.",
+        name: "I implemented 4 subscription payment flows covering package renewals, upgrades, additional storage, and additional user accounts.",
       },
       {
         id: 2,
-        name: "Implemented role-based permissions across 60+ pages and panels, controlling create, read, update, and delete actions.",
+        name: "I implemented role-based permissions across 60+ pages and panels, controlling create, read, update, and delete actions.",
       },
       {
         id: 3,
-        name: "Built 15+ SaaS pages and components, connecting backend APIs, subscription payments, and permission controls to user-facing workflows.",
+        name: "I built 15+ SaaS pages and components, connecting backend APIs, subscription payments, and permission controls to user-facing workflows.",
       },
     ],
     techStack: [
@@ -274,19 +274,19 @@ export const projects: Project[] = [
     task: [
       {
         id: 1,
-        name: "Architected and built a multi-tenant SaaS platform from scratch, integrating real-time reservations, automated payments, and operational reporting.",
+        name: "I architected and built a multi-tenant SaaS platform from scratch, integrating real-time reservations, automated payments, and operational reporting.",
       },
       {
         id: 2,
-        name: "Integrated Xendit payment capture, automated reminders, and reconciliation, reducing manual payment tracking by 90% and enabling launch without a dedicated finance workflow.",
+        name: "I integrated Xendit payment capture, automated reminders, and reconciliation, reducing manual payment tracking by 90% and enabling launch without a dedicated finance workflow.",
       },
       {
         id: 3,
-        name: "Developed a responsive Tailwind CSS dashboard for venue analytics, revenue reports, booking workflows, and customer insights.",
+        name: "I developed a responsive Tailwind CSS dashboard for venue analytics, revenue reports, booking workflows, and customer insights.",
       },
       {
         id: 4,
-        name: "Collaborated with cross-functional teams in an agile environment, delivering sprint commitments on time.",
+        name: "I collaborated with cross-functional teams in an agile environment, delivering sprint commitments on time.",
       },
     ],
     techStack: [
@@ -360,15 +360,15 @@ export const projects: Project[] = [
     task: [
       {
         id: 1,
-        name: "Maintained and enhanced the Kotlin Android application through performance and UI/UX improvements, supporting 15,000+ Google Play downloads.",
+        name: "I maintained and enhanced the Kotlin Android application through performance and UI/UX improvements, supporting 15,000+ Google Play downloads.",
       },
       {
         id: 2,
-        name: "Built a freemium subscription model with candidate filtering and recruiter analytics, establishing the platform’s primary recurring revenue stream.",
+        name: "I built a freemium subscription model with candidate filtering and recruiter analytics, establishing the platform’s primary recurring revenue stream.",
       },
       {
         id: 3,
-        name: "Automated targeted newsletter campaigns through Mailchimp, increasing weekly active users by 28% and improving retention by 35%.",
+        name: "I automated targeted newsletter campaigns through Mailchimp, increasing weekly active users by 28% and improving retention by 35%.",
       },
     ],
     techStack: [
@@ -428,11 +428,11 @@ export const projects: Project[] = [
     task: [
       {
         id: 1,
-        name: "Delivered and maintained BisnisLink as one of 2 platforms at Business Watch Indonesia.",
+        name: "I delivered and maintained BisnisLink as one of 2 platforms at Business Watch Indonesia.",
       },
       {
         id: 2,
-        name: "Managed requirements, architecture, development, QA, and post-launch iteration without a dedicated product manager or technical lead.",
+        name: "I managed requirements, architecture, development, QA, and post-launch iteration without a dedicated product manager or technical lead.",
       },
     ],
     techStack: [

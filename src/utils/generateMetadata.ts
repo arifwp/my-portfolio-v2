@@ -5,7 +5,7 @@ import { Metadata } from "next";
 export function generateProjectMetadata(project: Project): Metadata {
   const title = `${project.title} Case Study`;
   const socialTitle = `${title} | ${personName}`;
-  const description = `${project.overview} Explore Arif Wahyu Prasetyo’s work at ${project.company}.`;
+  const description = `${project.overview} Explore my work at ${project.company}.`;
   const url = absoluteUrl(`/project/${project.slug}`);
   const images = [
     {

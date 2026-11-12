@@ -20,7 +20,7 @@ export const siteUrl = configuredUrl.origin;
 export const siteName = "Arif Wahyu Prasetyo Portfolio";
 export const personName = "Arif Wahyu Prasetyo";
 export const siteDescription =
-  "Arif Wahyu Prasetyo is a Software Engineer in Boyolali, Indonesia, with 3+ years building SaaS, booking, and payment workflows using React and TypeScript.";
+  "I'm a Software Engineer in Boyolali, Indonesia, with 3+ years building SaaS, booking, and payment workflows using React and TypeScript.";
 export const socialProfiles = [
   "https://github.com/arifwp",
   "https://linkedin.com/in/arif-wahyu-prasetyo",

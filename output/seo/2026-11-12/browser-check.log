@@ -1,0 +1,33 @@
+### Result
+{"noJavaScript":[{"path":"/","h1":1,"h1Visible":true,"contentLength":1367,"projectIntro":null},{"path":"/about-me","h1":1,"h1Visible":true,"contentLength":3816,"projectIntro":null},{"path":"/project/etix","h1":1,"h1Visible":true,"contentLength":1340,"projectIntro":true},{"path":"/project/repo-alpha-red-group-portal","h1":1,"h1Visible":true,"contentLength":1340,"projectIntro":true},{"path":"/project/legal-plus","h1":1,"h1Visible":true,"contentLength":1398,"projectIntro":true},{"path":"/project/playfields","h1":1,"h1Visible":true,"contentLength":1591,"projectIntro":true},{"path":"/project/kubu-id","h1":1,"h1Visible":true,"contentLength":1477,"projectIntro":true},{"path":"/project/bisnislink","h1":1,"h1Visible":true,"contentLength":1241,"projectIntro":true}],"responsive":[{"path":"/","viewport":320,"documentWidth":320,"h1Visible":true,"brokenImages":[]},{"path":"/","viewport":390,"documentWidth":390,"h1Visible":true,"brokenImages":[]},{"path":"/","viewport":768,"documentWidth":768,"h1Visible":true,"brokenImages":[]},{"path":"/","viewport":1440,"documentWidth":1440,"h1Visible":true,"brokenImages":[]},{"path":"/about-me","viewport":320,"documentWidth":320,"h1Visible":true,"brokenImages":[]},{"path":"/about-me","viewport":390,"documentWidth":390,"h1Visible":true,"brokenImages":[]},{"path":"/about-me","viewport":768,"documentWidth":768,"h1Visible":true,"brokenImages":[]},{"path":"/about-me","viewport":1440,"documentWidth":1440,"h1Visible":true,"brokenImages":[]},{"path":"/project/etix","viewport":320,"documentWidth":320,"h1Visible":true,"brokenImages":[]},{"path":"/project/etix","viewport":390,"documentWidth":390,"h1Visible":true,"brokenImages":[]},{"path":"/project/etix","viewport":768,"documentWidth":768,"h1Visible":true,"brokenImages":[]},{"path":"/project/etix","viewport":1440,"documentWidth":1440,"h1Visible":true,"brokenImages":[]},{"path":"/project/repo-alpha-red-group-portal","viewport":320,"documentWidth":320,"h1Visible":true,"brokenImages":[]},{"path":"/project/repo-alpha-red-group-portal","viewport":390,"documentWidth":390,"h1Visible":true,"brokenImages":[]},{"path":"/project/repo-alpha-red-group-portal","viewport":768,"documentWidth":768,"h1Visible":true,"brokenImages":[]},{"path":"/project/repo-alpha-red-group-portal","viewport":1440,"documentWidth":1440,"h1Visible":true,"brokenImages":[]},{"path":"/project/legal-plus","viewport":320,"documentWidth":320,"h1Visible":true,"brokenImages":[]},{"path":"/project/legal-plus","viewport":390,"documentWidth":390,"h1Visible":true,"brokenImages":[]},{"path":"/project/legal-plus","viewport":768,"documentWidth":768,"h1Visible":true,"brokenImages":[]},{"path":"/project/legal-plus","viewport":1440,"documentWidth":1440,"h1Visible":true,"brokenImages":[]},{"path":"/project/playfields","viewport":320,"documentWidth":320,"h1Visible":true,"brokenImages":[]},{"path":"/project/playfields","viewport":390,"documentWidth":390,"h1Visible":true,"brokenImages":[]},{"path":"/project/playfields","viewport":768,"documentWidth":768,"h1Visible":true,"brokenImages":[]},{"path":"/project/playfields","viewport":1440,"documentWidth":1440,"h1Visible":true,"brokenImages":[]},{"path":"/project/kubu-id","viewport":320,"documentWidth":320,"h1Visible":true,"brokenImages":[]},{"path":"/project/kubu-id","viewport":390,"documentWidth":390,"h1Visible":true,"brokenImages":[]},{"path":"/project/kubu-id","viewport":768,"documentWidth":768,"h1Visible":true,"brokenImages":[]},{"path":"/project/kubu-id","viewport":1440,"documentWidth":1440,"h1Visible":true,"brokenImages":[]},{"path":"/project/bisnislink","viewport":320,"documentWidth":320,"h1Visible":true,"brokenImages":[]},{"path":"/project/bisnislink","viewport":390,"documentWidth":390,"h1Visible":true,"brokenImages":[]},{"path":"/project/bisnislink","viewport":768,"documentWidth":768,"h1Visible":true,"brokenImages":[]},{"path":"/project/bisnislink","viewport":1440,"documentWidth":1440,"h1Visible":true,"brokenImages":[]}],"errors":[]}
+### Ran Playwright code
+```js
+await (async (page) => {
+ const origin = 'http://localhost:3112';
+ const xml = await (await page.request.get(origin + '/sitemap.xml')).text();
+ const paths = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map(m => new URL(m[1]).pathname);
+ const result = { noJavaScript: [], responsive: [], errors: [] };
+ const context = await page.context().browser().newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
+ const p = await context.newPage();
+ for (const path of paths) {
+   await p.goto(origin + path);
+   const text = await p.locator('main').innerText();
+   const row = { path, h1: await p.locator('main h1').count(), h1Visible: await p.locator('main h1').isVisible(), contentLength: text.length, projectIntro: path.startsWith('/project/') ? text.includes('I worked as a ') : null };
+   result.noJavaScript.push(row);
+   if (row.h1 !== 1 || !row.h1Visible || row.contentLength < 300 || row.projectIntro === false) result.errors.push({ type: 'no-js-content', ...row });
+ }
+ await context.close();
+ page.on('pageerror', error => result.errors.push({ type: 'pageerror', message: error.message }));
+ for (const path of paths) {
+   for (const width of [320, 390, 768, 1440]) {
+     await page.setViewportSize({ width, height: 900 });
+     await page.goto(origin + path);
+     await page.evaluate(() => document.fonts.ready);
+     const row = await page.evaluate(() => ({ path: location.pathname, viewport: innerWidth, documentWidth: document.documentElement.scrollWidth, h1Visible: !!document.querySelector('main h1')?.getClientRects().length, brokenImages: [...document.images].filter(img => img.complete && !img.naturalWidth).map(img => img.src) }));
+     result.responsive.push(row);
+     if (row.documentWidth > row.viewport + 1 || !row.h1Visible || row.brokenImages.length) result.errors.push({ type: 'responsive', ...row });
+   }
+ }
+ return result;
+})(page);
+```

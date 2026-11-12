@@ -1,0 +1,287 @@
+{
+  "noJavaScript": [
+    {
+      "path": "/",
+      "h1": 1,
+      "h1Visible": true,
+      "contentLength": 1367,
+      "projectIntro": null
+    },
+    {
+      "path": "/about-me",
+      "h1": 1,
+      "h1Visible": true,
+      "contentLength": 3816,
+      "projectIntro": null
+    },
+    {
+      "path": "/project/etix",
+      "h1": 1,
+      "h1Visible": true,
+      "contentLength": 1340,
+      "projectIntro": true
+    },
+    {
+      "path": "/project/repo-alpha-red-group-portal",
+      "h1": 1,
+      "h1Visible": true,
+      "contentLength": 1340,
+      "projectIntro": true
+    },
+    {
+      "path": "/project/legal-plus",
+      "h1": 1,
+      "h1Visible": true,
+      "contentLength": 1398,
+      "projectIntro": true
+    },
+    {
+      "path": "/project/playfields",
+      "h1": 1,
+      "h1Visible": true,
+      "contentLength": 1591,
+      "projectIntro": true
+    },
+    {
+      "path": "/project/kubu-id",
+      "h1": 1,
+      "h1Visible": true,
+      "contentLength": 1477,
+      "projectIntro": true
+    },
+    {
+      "path": "/project/bisnislink",
+      "h1": 1,
+      "h1Visible": true,
+      "contentLength": 1241,
+      "projectIntro": true
+    }
+  ],
+  "responsive": [
+    {
+      "path": "/",
+      "viewport": 320,
+      "documentWidth": 320,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/",
+      "viewport": 390,
+      "documentWidth": 390,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/",
+      "viewport": 768,
+      "documentWidth": 768,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/about-me",
+      "viewport": 320,
+      "documentWidth": 320,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/about-me",
+      "viewport": 390,
+      "documentWidth": 390,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/about-me",
+      "viewport": 768,
+      "documentWidth": 768,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/about-me",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/etix",
+      "viewport": 320,
+      "documentWidth": 320,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/etix",
+      "viewport": 390,
+      "documentWidth": 390,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/etix",
+      "viewport": 768,
+      "documentWidth": 768,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/etix",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/repo-alpha-red-group-portal",
+      "viewport": 320,
+      "documentWidth": 320,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/repo-alpha-red-group-portal",
+      "viewport": 390,
+      "documentWidth": 390,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/repo-alpha-red-group-portal",
+      "viewport": 768,
+      "documentWidth": 768,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/repo-alpha-red-group-portal",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/legal-plus",
+      "viewport": 320,
+      "documentWidth": 320,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/legal-plus",
+      "viewport": 390,
+      "documentWidth": 390,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/legal-plus",
+      "viewport": 768,
+      "documentWidth": 768,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/legal-plus",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/playfields",
+      "viewport": 320,
+      "documentWidth": 320,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/playfields",
+      "viewport": 390,
+      "documentWidth": 390,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/playfields",
+      "viewport": 768,
+      "documentWidth": 768,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/playfields",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/kubu-id",
+      "viewport": 320,
+      "documentWidth": 320,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/kubu-id",
+      "viewport": 390,
+      "documentWidth": 390,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/kubu-id",
+      "viewport": 768,
+      "documentWidth": 768,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/kubu-id",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/bisnislink",
+      "viewport": 320,
+      "documentWidth": 320,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/bisnislink",
+      "viewport": 390,
+      "documentWidth": 390,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/bisnislink",
+      "viewport": 768,
+      "documentWidth": 768,
+      "h1Visible": true,
+      "brokenImages": []
+    },
+    {
+      "path": "/project/bisnislink",
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "h1Visible": true,
+      "brokenImages": []
+    }
+  ],
+  "errors": []
+}

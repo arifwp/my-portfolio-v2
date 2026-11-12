@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 const title = "About Me | Skills & Experience";
 const description =
-  "Explore Arif Wahyu Prasetyo’s skills and 3+ years of software engineering experience across Alpha Red Solutions, Legal Plus, Playfields, and Business Watch Indonesia.";
+  "Explore my skills and 3+ years of software engineering experience across Alpha Red Solutions, Legal Plus, Playfields, and Business Watch Indonesia.";
 
 export const metadata: Metadata = {
   title,

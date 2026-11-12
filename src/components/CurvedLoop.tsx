@@ -8,7 +8,7 @@ interface CurvedLoopProps {
   interactive?: boolean;
 }
 
-const TEXT = "Explore Other Projects ✦ Portfolio Of Arif Prasetyo ✦";
+const TEXT = "Explore My Other Projects ✦ My Portfolio ✦";
 const SPEED = 1.1;
 const CURVE_AMOUNT = 400;
 const DIRECTION: "left" | "right" = "right";

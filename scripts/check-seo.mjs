@@ -5,6 +5,15 @@ import { readFile } from "node:fs/promises";
 const origin = process.argv[2] || "http://localhost:3100";
 const titles = new Set();
 const descriptions = new Set();
+const normalizeText = (text) =>
+  text
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#x27;|&#39;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/\s+/g, " ")
+    .trim();
 const sitemapResponse = await fetch(`${origin}/sitemap.xml`);
 assert.equal(sitemapResponse.status, 200);
 const sitemap = await sitemapResponse.text();
@@ -25,6 +34,11 @@ for (const url of urls) {
   const response = await fetch(new URL(url.pathname, origin));
   assert.equal(response.status, 200, url.pathname);
   const html = await response.text();
+  const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)?.[1];
+  assert(main, `${url.pathname}: main content in initial HTML`);
+  const mainText = normalizeText(
+    main.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "").replace(/<[^>]+>/g, " "),
+  );
   assert.equal(
     new URL(html.match(/rel="canonical" href="([^"]+)"/)?.[1]).href,
     url.href,
@@ -45,7 +59,7 @@ for (const url of urls) {
   );
   descriptions.add(description);
   assert(
-    !/undefined\/|Surakarta|14,000|50\+ users|zero downtime|without interrupting live ticket sales/.test(
+    !/undefined\/|Surakarta|14,000|50\+ users|zero downtime|without interrupting live ticket sales/i.test(
       html,
     ),
     url.pathname,
@@ -91,6 +105,12 @@ for (const url of urls) {
   assert(person.knowsAbout.includes("Go"));
   assert(person.knowsAbout.includes("Express.js"));
   assert.equal(person.alumniOf.name, "Amikom University Yogyakarta");
+  if (url.pathname === "/" || url.pathname === "/about-me") {
+    assert(
+      mainText.toLowerCase().includes(person.address.addressLocality.toLowerCase()),
+      `${url.pathname}: visible location matches structured data`,
+    );
+  }
   assert(nodes.some((node) => node["@id"] === `${canonicalOrigin}/#website`));
   const page = nodes.find((node) =>
     ["WebPage", "CollectionPage", "ProfilePage"].includes(node["@type"]),
@@ -100,14 +120,16 @@ for (const url of urls) {
   if (url.pathname.startsWith("/project/")) {
     const work = nodes.find((node) => node["@type"] === "CreativeWork");
     assert(
-      work && html.includes(work.abstract),
+      work && mainText.includes(normalizeText(work.abstract)),
       `${url.pathname}: visible project description`,
     );
     assert(
-      work.description && html.includes(work.description),
+      work.description && mainText.includes(normalizeText(work.description)),
       `${url.pathname}: visible project summary`,
     );
     assert.equal(work.author["@id"], person["@id"]);
+    assert(work.description.startsWith("I worked as a "));
+    assert(normalizeText(description).includes("Explore my work at "));
     assert(nodes.some((node) => node["@type"] === "BreadcrumbList"));
   }
   if (url.pathname === "/about-me") {
@@ -121,7 +143,7 @@ for (const url of urls) {
       "15,000+",
       "GPA 3.78/4.00",
     ]) {
-      assert(html.includes(content), `About page missing ${content}`);
+      assert(mainText.includes(normalizeText(content)), `About page missing ${content}`);
     }
   }
   for (const node of nodes) {
